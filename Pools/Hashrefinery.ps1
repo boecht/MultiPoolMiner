@@ -34,7 +34,7 @@ $HashRefinery_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore 
     $HashRefinery_Port = $HashRefinery_Request.$_.port
     $HashRefinery_Algorithm = $HashRefinery_Request.$_.name
     $HashRefinery_Algorithm_Norm = Get-Algorithm $HashRefinery_Algorithm
-    $HashRefinery_Coin = ""
+    $HashRefinery_Coin = $HashRefinery_Request.$_.coins
 
     $Divisor = 1000000
 
@@ -49,8 +49,8 @@ $HashRefinery_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore 
         "x11" {$Divisor *= 1000}
     }
 
-    if ((Get-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit" -Value ([Double]$HashRefinery_Request.$_.estimate_last24h / $Divisor) -Duration (New-TimeSpan -Days 1)}
-    else {$Stat = Set-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit" -Value ([Double]$HashRefinery_Request.$_.estimate_current / $Divisor) -Duration $StatSpan -ChangeDetection $true}
+    if ((Get-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit" -Value ([Double]$HashRefinery_Request.$_.estimate_last24h / $Divisor *(1-($HashRefinery_Request.$_.fees/100))) -Duration (New-TimeSpan -Days 1)}
+    else {$Stat = Set-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit" -Value ([Double]$HashRefinery_Request.$_.estimate_current / $Divisor *(1-($HashRefinery_Request.$_.fees/100))) -Duration $StatSpan -ChangeDetection $true}
 
     $HashRefinery_Regions | ForEach-Object {
         $HashRefinery_Region = $_
