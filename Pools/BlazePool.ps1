@@ -33,7 +33,7 @@ $BlazePool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $BlazePool_Port = $BlazePool_Request.$_.port
     $BlazePool_Algorithm = $BlazePool_Request.$_.name
     $BlazePool_Algorithm_Norm = Get-Algorithm $BlazePool_Algorithm
-    $BlazePool_Coin = ""
+    $BlazePool_Coin = $BlazePool_Request.$_.coins
 
     $Divisor = 1000000
 
@@ -45,8 +45,8 @@ $BlazePool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         "keccak"    {$Divisor *= 1000}
     }
     
-    if ((Get-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit" -Value ([Double]$BlazePool_Request.$_.estimate_last24h / $Divisor) -Duration (New-TimeSpan -Days 1)}
-    else {$Stat = Set-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit" -Value ([Double]$BlazePool_Request.$_.estimate_current / $Divisor) -Duration $StatSpan -ChangeDetection $true}
+    if ((Get-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit" -Value ([Double]$BlazePool_Request.$_.estimate_last24h / $Divisor *(1-($BlazePool_Request.$_.fees/100))) -Duration (New-TimeSpan -Days 1)}
+    else {$Stat = Set-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit" -Value ([Double]$BlazePool_Request.$_.estimate_current / $Divisor *(1-($BlazePool_Request.$_.fees/100))) -Duration $StatSpan -ChangeDetection $true}
 
     $BlazePool_Regions | ForEach-Object {
         $BlazePool_Region = $_
