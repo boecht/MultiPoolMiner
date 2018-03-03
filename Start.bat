@@ -6,13 +6,10 @@ setx GPU_USE_SYNC_OBJECTS 1
 setx GPU_MAX_ALLOC_PERCENT 100
 setx GPU_SINGLE_ALLOC_PERCENT 100
 
-set "command=& .\multipoolminer.ps1 -wallet 1Q24z7gHPDbedkaWDTFqhMF8g7iHMehsCb -username aaronsace -workername multipoolminer -region europe -currency btc,usd,eur -type amd,nvidia,cpu -poolname miningpoolhubcoins,zpool,nicehash -algorithm blake2s,cryptonight,decrednicehash,ethash,ethash2gb,equihash,groestl,keccak,lbry,lyra2re2,lyra2z,neoscrypt,pascal,sib,skunk -donate 24 -watchdog -minerstatusurl https://multipoolminer.io/monitor/miner.php -switchingprevention 2"
+set "command=& .\multipoolminer.ps1 -wallet 18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW -username boecht -workername Miner -region europe -currency btc,usd,eur -type nvidia -watchdog -interval 90 -minerstatusurl https://multipoolminer.io/monitor/miner.php -switchingprevention 5 -ExcludeAlgorithm CryptoNight,C11,DecredNiceHash,Groestl,Blakecoin,MyriadGroestl,Pascal,Lbry,SiaNiceHash"
 
 start pwsh -noexit -executionpolicy bypass -command "& .\reader.ps1 -log 'MultiPoolMiner_\d\d\d\d-\d\d-\d\d\.txt' -sort '^[^_]*_' -quickstart"
 
-pwsh -noexit -executionpolicy bypass -windowstyle maximized -command "%command%"
-powershell -version 5.0 -noexit -executionpolicy bypass -windowstyle maximized -command "%command%"
-msiexec -i https://github.com/PowerShell/PowerShell/releases/download/v6.0.1/PowerShell-6.0.1-win-x64.msi -qb!
 pwsh -noexit -executionpolicy bypass -windowstyle maximized -command "%command%"
 
 pause
