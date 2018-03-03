@@ -13,7 +13,7 @@ $Commands = [PSCustomObject]@{
     #"lbry" = @() #Lbry   <<< ExcavatorNvidia2
     "lyra2rev2" = @() #Lyra2RE2
     #"neoscrypt" = @() #NeoScrypt   <<<  PalginNvidia
-    "nist5" = @() #nist5
+    #"nist5" = @() #nist5   <<< ExcavatorNvidia2
     #"pascal" = @() #Pascal   <<< ExcavatorNvidia2
 }
 
