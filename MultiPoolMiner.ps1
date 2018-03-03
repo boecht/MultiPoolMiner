@@ -92,6 +92,7 @@ if ((Get-Command "Get-MpPreference" -ErrorAction SilentlyContinue) -and (Get-MpC
 }
 
 #Check for software updates
+Write-Host "Checking for software updates... "
 $Downloader = Start-Job -InitializationScript ([scriptblock]::Create("Set-Location('$(Get-Location)')")) -ArgumentList ($Version, $PSVersionTable.PSVersion, "") -FilePath .\Updater.ps1
 
 #Set donation parameters
@@ -177,22 +178,6 @@ while ($true) {
         )
     }
 
-    #Activate or deactivate donation
-    if ($Config.Donate -lt 10) {$Config.Donate = 10}
-    if ($Timer.AddDays(-1) -ge $LastDonated) {$LastDonated = $Timer}
-    if ($Timer.AddDays(-1).AddMinutes($Config.Donate) -ge $LastDonated) {
-        Get-ChildItem "Pools" | ForEach-Object {
-            $Config.Pools | Add-Member $_.BaseName (
-                [PSCustomObject]@{
-                    BTC    = $WalletDonate
-                    User   = $UserNameDonate
-                    Worker = $WorkerNameDonate
-                }
-            ) -Force
-        }
-        $Config | Add-Member ExcludePoolName @() -Force
-    }
-
     #Clear pool cache if the configuration has changed
     if (($ConfigBackup | ConvertTo-Json -Compress) -ne ($Config | ConvertTo-Json -Compress)) {$AllPools = $null}
 
@@ -213,6 +198,7 @@ while ($true) {
     $WatchdogReset = ($WatchdogReset / ($Strikes * $Strikes * $Strikes) * (($Strikes * $Strikes * $Strikes) - 1)) + $StatSpan.TotalSeconds
 
     #Update the exchange rates
+    Write-Host -NoNewLine "Updating exchange rates... "
     try {
         Write-Log "Updating exchange rates from Coinbase. "
         $NewRates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
@@ -223,11 +209,13 @@ while ($true) {
     }
 
     #Load the stats
+    Write-Host -NoNewLine "Loading stats... "
     Write-Log "Loading saved statistics. "
     $Stats = [PSCustomObject]@{}
     if (Test-Path "Stats") {Get-ChildItemContent "Stats" | ForEach-Object {$Stats | Add-Member $_.Name $_.Content}}
 
     #Load information about the pools
+    Write-Host -NoNewLine "Loading pools... "
     Write-Log "Loading pool information. "
     $NewPools = @()
     if (Test-Path "Pools") {
@@ -276,6 +264,7 @@ while ($true) {
 
     #Load information about the miners
     #Messy...?
+    Write-Host -NoNewLine "Loading miners"
     Write-Log "Getting miner information. "
     # Get all the miners, get just the .Content property and add the name, select only the ones that match our $Config.Type (CPU, AMD, NVIDIA) or all of them if type is unset,
     # select only the ones that have a HashRate matching our algorithms, and that only include algorithms we have pools for
@@ -289,6 +278,7 @@ while ($true) {
             Where-Object {$Config.ExcludeMinerName.Count -eq 0 -or (Compare-Object $Config.ExcludeMinerName $_.Name -IncludeEqual -ExcludeDifferent | Measure-Object).Count -eq 0}
     }
     Write-Log "Calculating profit for each miner. "
+    Write-Host -NoNewLine "."
     $AllMiners | ForEach-Object {
         $Miner = $_
 
@@ -371,11 +361,13 @@ while ($true) {
 
         if (-not $Miner.API) {$Miner | Add-Member API "Miner" -Force}
     }
+    Write-Host -NoNewLine "."
     $Miners = $AllMiners | Where-Object {(Test-Path $_.Path) -and ((-not $_.PrerequisitePath) -or (Test-Path $_.PrerequisitePath))}
     if ($Downloader.State -ne "Running") {
         $Downloader = Start-Job -InitializationScript ([scriptblock]::Create("Set-Location('$(Get-Location)')")) -ArgumentList (@($AllMiners | Where-Object {$_.PrerequisitePath} | Select-Object @{name = "URI"; expression = {$_.PrerequisiteURI}}, @{name = "Path"; expression = {$_.PrerequisitePath}}, @{name = "Searchable"; expression = {$false}}) + @($AllMiners | Select-Object URI, Path, @{name = "Searchable"; expression = {$Miner = $_; ($AllMiners | Where-Object {(Split-Path $_.Path -Leaf) -eq (Split-Path $Miner.Path -Leaf) -and $_.URI -ne $Miner.URI}).Count -eq 0}}) | Select-Object * -Unique) -FilePath .\Downloader.ps1
     }
     # Open firewall ports for all miners
+    Write-Host -NoNewLine "."
     if (Get-Command "Get-MpPreference" -ErrorAction SilentlyContinue) {
         if ((Get-Command "Get-MpComputerStatus" -ErrorAction SilentlyContinue) -and (Get-MpComputerStatus -ErrorAction SilentlyContinue)) {
             if (Get-Command "Get-NetFirewallRule" -ErrorAction SilentlyContinue) {
@@ -389,6 +381,7 @@ while ($true) {
     }
 
     #Apply watchdog to miners
+    Write-Host -NoNewLine "."
     $Miners = $Miners | Where-Object {
         $Miner = $_
         $Miner_WatchdogTimers = $WatchdogTimers | Where-Object MinerName -EQ $Miner.Name | Where-Object Kicked -LT $Timer.AddSeconds( - $WatchdogInterval) | Where-Object Kicked -GT $Timer.AddSeconds( - $WatchdogReset)
@@ -396,12 +389,14 @@ while ($true) {
     }
 
     #Update the active miners
+    Write-Host -NoNewLine "."
     if ($Miners.Count -eq 0) {
         Write-Log -Level Warn "No miners available. "
         if ($Downloader) {$Downloader | Receive-Job}
         Start-Sleep $Config.Interval
         continue
     }
+    Write-Host -NoNewLine "."
     $ActiveMiners | ForEach-Object {
         $_.Profit = 0
         $_.Profit_Comparison = 0
@@ -411,6 +406,7 @@ while ($true) {
         $_.Best = $false
         $_.Best_Comparison = $false
     }
+    Write-Host -NoNewLine "."
     $Miners | ForEach-Object {
         $Miner = $_
         $ActiveMiner = $ActiveMiners | Where-Object {
@@ -461,6 +457,7 @@ while ($true) {
             }
         }
     }
+    Write-Host -NoNewLine "."
     $ActiveMiners | Where-Object Device_Auto | ForEach-Object {
         $Miner = $_
         $Miner.Device = ($Miners | Where-Object {(Compare-Object $Miner.Type $_.Type -IncludeEqual -ExcludeDifferent | Measure-Object).Count -gt 0}).Device | Select-Object -Unique | Sort-Object
@@ -471,6 +468,7 @@ while ($true) {
     $ActiveMiners | Where-Object {$_.GetStatus() -EQ "Running"} | ForEach-Object {$_.Profit_Bias = $_.Profit_Unbias}
 
     #Get most profitable miner combination i.e. AMD+NVIDIA+CPU
+    Write-Host -NoNewLine "."
     $BestMiners = $ActiveMiners | Select-Object Type, Index -Unique | ForEach-Object {$Miner_GPU = $_; ($ActiveMiners | Where-Object {(Compare-Object $Miner_GPU.Type $_.Type | Measure-Object).Count -eq 0 -and (Compare-Object $Miner_GPU.Index $_.Index | Measure-Object).Count -eq 0} | Sort-Object -Descending {($_ | Where-Object Profit -EQ $null | Measure-Object).Count}, {($_ | Measure-Object Profit_Bias -Sum).Sum}, {($_ | Where-Object Profit -NE 0 | Measure-Object).Count} | Select-Object -First 1)}
     $BestDeviceMiners = $ActiveMiners | Select-Object Device -Unique | ForEach-Object {$Miner_GPU = $_; ($ActiveMiners | Where-Object {(Compare-Object $Miner_GPU.Device $_.Device | Measure-Object).Count -eq 0} | Sort-Object -Descending {($_ | Where-Object Profit -EQ $null | Measure-Object).Count}, {($_ | Measure-Object Profit_Bias -Sum).Sum}, {($_ | Where-Object Profit -NE 0 | Measure-Object).Count} | Select-Object -First 1)}
     $BestMiners_Comparison = $ActiveMiners | Select-Object Type, Index -Unique | ForEach-Object {$Miner_GPU = $_; ($ActiveMiners | Where-Object {(Compare-Object $Miner_GPU.Type $_.Type | Measure-Object).Count -eq 0 -and (Compare-Object $Miner_GPU.Index $_.Index | Measure-Object).Count -eq 0} | Sort-Object -Descending {($_ | Where-Object Profit -EQ $null | Measure-Object).Count}, {($_ | Measure-Object Profit_Comparison -Sum).Sum}, {($_ | Where-Object Profit -NE 0 | Measure-Object).Count} | Select-Object -First 1)}
@@ -495,6 +493,7 @@ while ($true) {
             }
         }
     }
+    Write-Host -NoNewLine "."
     $BestMiners_Combos += $Miners_Device_Combos | ForEach-Object {
         $Miner_Device_Combo = $_.Combination
         [PSCustomObject]@{
@@ -505,6 +504,7 @@ while ($true) {
             }
         }
     }
+    Write-Host -NoNewLine "."
     $BestMiners_Combos_Comparison = $Miners_Type_Combos | ForEach-Object {
         $Miner_Type_Combo = $_.Combination
         $Miners_Index_Combos | ForEach-Object {
@@ -522,6 +522,7 @@ while ($true) {
             }
         }
     }
+    Write-Host -NoNewLine "."
     $BestMiners_Combos_Comparison += $Miners_Device_Combos | ForEach-Object {
         $Miner_Device_Combo = $_.Combination
         [PSCustomObject]@{
@@ -532,16 +533,19 @@ while ($true) {
             }
         }
     }
+    Write-Host -NoNewLine "."
     $BestMiners_Combo = $BestMiners_Combos | Sort-Object -Descending {($_.Combination | Where-Object Profit -EQ $null | Measure-Object).Count}, {($_.Combination | Measure-Object Profit_Bias -Sum).Sum}, {($_.Combination | Where-Object Profit -NE 0 | Measure-Object).Count} | Select-Object -First 1 | Select-Object -ExpandProperty Combination
     $BestMiners_Combo_Comparison = $BestMiners_Combos_Comparison | Sort-Object -Descending {($_.Combination | Where-Object Profit -EQ $null | Measure-Object).Count}, {($_.Combination | Measure-Object Profit_Comparison -Sum).Sum}, {($_.Combination | Where-Object Profit -NE 0 | Measure-Object).Count} | Select-Object -First 1 | Select-Object -ExpandProperty Combination
     $BestMiners_Combo | ForEach-Object {$_.Best = $true}
     $BestMiners_Combo_Comparison | ForEach-Object {$_.Best_Comparison = $true}
 
     #Stop or start miners in the active list depending on if they are the most profitable
+    Write-Host -NoNewLine "Checking if miner needs to be switched..."
     $ActiveMiners | Where-Object {$_.GetActivateCount() -GT 0} | Where-Object Best -EQ $false | ForEach-Object {
         $Miner = $_
 
         if ($Miner.GetStatus() -eq "Running") {
+            Write-Host -NoNewLine "YES, stopping..."
             Write-Log "Stopping miner ($($Miner.Name)). "
             $Miner.SetStatus("Idle")
 
@@ -566,6 +570,7 @@ while ($true) {
     Start-Sleep $Config.Delay #Wait to prevent BSOD
     $ActiveMiners | Where-Object Best -EQ $true | ForEach-Object {
         if ($_.GetStatus() -ne "Running") {
+            Write-Host -NoNewLine "starting..."
             Write-Log "Starting miner ($($_.Name)): '$($_.Path) $($_.Arguments)'"
             $DecayStart = $Timer
             $_.SetStatus("Running")
@@ -654,15 +659,18 @@ while ($true) {
     [GC]::Collect()
 
     #Do nothing for a few seconds as to not overload the APIs and display miner download status
+    Write-Host "Start waiting before next run. "
     Write-Log "Start waiting before next run. "
     for ($i = $Strikes; $i -gt 0 -or $Timer -lt $StatEnd; $i--) {
         if ($Downloader) {$Downloader | Receive-Job}
         Start-Sleep 10
         $Timer = (Get-Date).ToUniversalTime()
     }
+    Write-Host "Finish waiting before next run. "
     Write-Log "Finish waiting before next run. "
 
     #Save current hash rates
+    Write-Host "Saving current hash rates... "
     Write-Log "Saving hash rates. "
     $ActiveMiners | ForEach-Object {
         $Miner = $_
@@ -701,6 +709,7 @@ while ($true) {
             }
         }
     }
+    Write-Host "Starting next run. "
     Write-Log "Starting next run. "
 }
 
