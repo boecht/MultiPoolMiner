@@ -8,11 +8,11 @@ $Uri = "https://github.com/nicehash/excavator/releases/"
 $Commands = [PSCustomObject]@{
     "blake2s" = @() #Blake2s
     "decred" = @() #Decred
-    "daggerhashimoto" = @() #Ethash
-    "equihash" = @() #Equihash
+    #"daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
+    #"equihash" = @() #Equihash   BROKEN
     "lbry" = @() #Lbry
-    "lyra2rev2" = @() #Lyra2RE2
-    "neoscrypt" = @() #NeoScrypt
+    #"lyra2rev2" = @() #Lyra2RE2   <<< ExcavatorNvidia1
+    #"neoscrypt" = @() #NeoScrypt   BROKEN
     "nist5" = @() #nist5
     "pascal" = @() #Pascal
 }
