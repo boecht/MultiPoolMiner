@@ -1,10 +1,24 @@
 {
   "Pools": {
+    "MiningPoolHub": {
+      "User": "$UserName",
+      "Worker": "$WorkerName",
+      "API_ID": "$API_ID",
+      "API_Key": "$API_Key"
+    },
     "MiningPoolHubCoins": {
       "User": "$UserName",
       "Worker": "$WorkerName",
       "API_ID": "$API_ID",
       "API_Key": "$API_Key"
+    },
+    "NiceHash": {
+      "BTC": "$Wallet",
+      "Worker": "$WorkerName"
+    },
+    "Zpool": {
+      "BTC": "$Wallet",
+      "Worker": "$WorkerName"
     }
   },
   "Miners": {
@@ -12,22 +26,20 @@
   "Wallet": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
   "UserName": "boecht",
   "WorkerName": "$WorkerName",
-  "API_ID": "0",
-  "API_Key": "",
   "Interval": "90",
   "Region": "europe",
-  "SSL": "$false",
+  "SSL": "$SSL",
   "Type": "nvidia",
-  "Algorithm": "",
-  "MinerName": "",
-  "PoolName": "",
+  "Algorithm": "$Algorithm",
+  "MinerName": "$MinerName",
+  "PoolName": "$PoolName",
   "ExcludeAlgorithm": "CryptoNight,C11,DecredNiceHash,Groestl,Blakecoin,MyriadGroestl,Pascal,Lbry,SiaNiceHash",
   "ExcludeMinerName": "CcminerKlaust,Prospector,XmrigNvidia",
-  "ExcludePoolName": "",
+  "ExcludePoolName": "$ExcludePoolName",
   "Currency": "btc,usd,eur",
-  "Donate": "24",
-  "Proxy": "",
-  "Delay": "0",
+  "Donate": "$Donate",
+  "Proxy": "$Proxy",
+  "Delay": "$Delay",
   "Watchdog": "$true",
   "MinerStatusURL": "https://multipoolminer.io/monitor/miner.php",
   "MinerStatusKey": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
