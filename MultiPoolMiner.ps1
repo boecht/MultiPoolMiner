@@ -589,6 +589,7 @@ while ($true) {
         @{Label = "Accuracy"; Expression = {$_.Pools.PSObject.Properties.Value.MarginOfError | ForEach-Object {(1 - $_).ToString("P0")}}; Align = 'right'}, 
         @{Label = "Biased"; Expression = {if ($_.Profit_Bias) {ConvertTo-LocalCurrency $($_.Profit_Bias *1000) $($Rates.$($Config.Currency | Select-Object -Index 0)) -Offset 6} else {"Unknown"}}; Align = "right"},
         @{Label = "Unbiased"; Expression = {if ($_.Profit_Unbias) {ConvertTo-LocalCurrency $($_.Profit_Unbias *1000) $($Rates.$($Config.Currency | Select-Object -Index 0)) -Offset 6} else {"Unknown"}}; Align = "right"},
+        @{Label = "$($Config.Currency | Select-Object -Index 0)/GH/Day"; Expression = {$_.Pools.PSObject.Properties.Value.Price | ForEach-Object {ConvertTo-LocalCurrency $($_ * 1000000000) $($Rates.$($Config.Currency | Select-Object -Index 0)) -Offset 2}}; Align = "right"}, 
         @{Label = "Pool"; Expression = {$_.Pools.PSObject.Properties.Value | ForEach-Object {if ($_.Info) {"$($_.Name)-$($_.Info)"}else {"$($_.Name)"}}}}
     ) | Out-Host
 
