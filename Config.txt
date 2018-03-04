@@ -23,9 +23,6 @@
   },
   "Miners": {
   },
-  "Wallet": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
-  "UserName": "boecht",
-  "WorkerName": "$WorkerName",
   "Interval": "90",
   "Region": "europe",
   "SSL": "$SSL",
