@@ -36,6 +36,11 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
     $Zpool_Algorithm_Norm = Get-Algorithm $Zpool_Algorithm
     $Zpool_Coin = $Zpool_Request.$_.coins
 
+    if ([Double]$_.paying -eq 0.0) {
+        Write-Log "Pool API ($Name, $Zpool_Algorithm_Norm) returned price of zero. "
+        return
+    }
+    
     $Divisor = 1000000
 
     switch ($Zpool_Algorithm_Norm) {
