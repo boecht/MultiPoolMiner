@@ -35,6 +35,11 @@ $BlazePool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $BlazePool_Algorithm_Norm = Get-Algorithm $BlazePool_Algorithm
     $BlazePool_Coin = $BlazePool_Request.$_.coins
 
+    if ([Double]$_.paying -eq 0.0) {
+        Write-Log "Pool API ($Name, $BlazePool_Algorithm_Norm) returned price of zero. "
+        return
+    }
+    
     $Divisor = 1000000
 
     switch ($BlazePool_Algorithm_Norm) {
