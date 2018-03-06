@@ -36,6 +36,11 @@ $MiningPoolHub_Request.return | ForEach-Object {
 
     if ($MiningPoolHub_Algorithm_Norm -eq "Sia") {$MiningPoolHub_Algorithm_Norm = "SiaClaymore"} #temp fix
 
+    if ([Double]$_.paying -eq 0.0) {
+        Write-Log "Pool API ($Name, $MiningPoolHub_Algorithm_Norm) returned price of zero. "
+        return
+    }
+    
     $Divisor = 1000000000
 
     $Stat = Set-Stat -Name "$($Name)_$($MiningPoolHub_Algorithm_Norm)_Profit" -Value ([Double]$_.profit / $Divisor *0.972) -Duration $StatSpan -ChangeDetection $true
