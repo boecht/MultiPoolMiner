@@ -36,7 +36,7 @@ $MiningPoolHub_Request.return | ForEach-Object {
 
     if ($MiningPoolHub_Algorithm_Norm -eq "Sia") {$MiningPoolHub_Algorithm_Norm = "SiaClaymore"} #temp fix
 
-    if ([Double]$_.paying -eq 0.0) {
+    if ([Double]$_.profit -eq 0.0) {
         Write-Log "Pool API ($Name, $MiningPoolHub_Algorithm_Norm) returned price of zero. "
         return
     }
