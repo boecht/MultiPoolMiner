@@ -35,7 +35,7 @@ $AHashPool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $AHashPool_Algorithm_Norm = Get-Algorithm $AHashPool_Algorithm
     $AHashPool_Coin = $AHashPool_Request.$_.coins
 
-    if ([Double]$_.paying -eq 0.0) {
+    if ([Double][Double]$AHashPool_Request.$_.estimate_current -eq 0.0) {
         Write-Log "Pool API ($Name, $AHashPool_Algorithm_Norm) returned price of zero. "
         return
     }
