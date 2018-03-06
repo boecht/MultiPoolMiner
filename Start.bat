@@ -8,7 +8,7 @@
 
 set "command=& .\multipoolminer.ps1 -wallet 18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW -username boecht -workername %COMPUTERNAME% -region europe -currency btc,usd,eur -type nvidia -watchdog -interval 90 -minerstatusurl https://multipoolminer.io/monitor/miner.php -switchingprevention 5 -ExcludeAlgorithm CryptoNight,C11,DecredNiceHash,Groestl,Blakecoin,MyriadGroestl,Pascal,Lbry,SiaNiceHash -ExcludeMinerName CcminerKlaust,Prospector,XmrigNvidia"
 
-RemoveLogs.bat
+start /B RemoveLogs.bat
 
 start pwsh -noexit -executionpolicy bypass -command "& .\reader.ps1 -log 'MultiPoolMiner_\d\d\d\d-\d\d-\d\d\.txt' -sort '^[^_]*_' -quickstart"
 
