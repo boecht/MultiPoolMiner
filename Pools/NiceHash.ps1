@@ -37,7 +37,7 @@ $NiceHash_Request.result.simplemultialgo | ForEach-Object {
     if ($NiceHash_Algorithm_Norm -eq "Sia") {$NiceHash_Algorithm_Norm = "SiaNiceHash"} #temp fix
     if ($NiceHash_Algorithm_Norm -eq "Decred") {$NiceHash_Algorithm_Norm = "DecredNiceHash"} #temp fix
     if ([Double]$_.paying -eq 0.0) {
-        Write-Log "Pool API ($Name, $_.name) returned price of zero. "
+        Write-Log "Pool API ($Name, {$_.name}) returned price of zero. "
         return
     }
 
