@@ -589,7 +589,7 @@ while ($true) {
     #Display active miners list
     $ActiveMiners | Where-Object {$_.GetActivateCount() -GT 0} | Sort-Object -Descending {$_.GetActiveLast()} | Select-Object -First (1 + 6 + 6) | Format-Table -Wrap (
         @{Label = "Status"; Expression = {if ($_.GetStatus() -eq "Running" -and $_.Speed_Live -eq 0) {"Starting"} else {$_.GetStatus()}}; Align = 'left'},
-        @{Label = "Speed"; Expression = {if ($_.GetStatus() -eq "Running") {$_.Speed_Live | ForEach-Object {"$($_ | ConvertTo-Hash)/s"}}}; Align = 'right'}, 
+        @{Label = "Speed"; Expression = {if ($_.GetStatus() -eq "Running" -and $_.Speed_Live -gt 0) {$_.Speed_Live | ForEach-Object {"$($_ | ConvertTo-Hash)/s"}}}; Align = 'right'}, 
         @{Label = "Active"; Expression = {"{0:dd} Days {0:hh} Hours {0:mm} Minutes" -f $_.GetActiveTime()}}, 
         @{Label = "Launched"; Expression = {Switch ($_.GetActivateCount()) {0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
         @{Label = "Command"; Expression = {"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}
