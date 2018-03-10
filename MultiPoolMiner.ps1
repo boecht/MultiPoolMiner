@@ -586,7 +586,7 @@ while ($true) {
     ) | Out-Host
 
     #Display active miners list
-    $ActiveMiners | Where-Object {$_.GetActivateCount() -gt 0} | Sort-Object -Property @{Expression={$_.GetStatus()}; Ascending = $True}, @{Expression={$_.GetActiveTime()}; Descending = $True} | Format-Table -Wrap (
+    $ActiveMiners | Where-Object {$_.GetActivateCount() -gt 0} | Sort-Object -Property @{Expression={$_.GetStatus()}; Ascending = $True}, @{Expression={$_.GetActiveTime()}; Descending = $True} | Format-Table (
         @{Label = "Status"; Expression = {if ($_.GetStatus() -eq "Running" -and $_.Speed_Live -eq 0) {"Starting"} else {$_.GetStatus()}}; Align = 'left'},
         @{Label = "Speed"; Expression = {if ($_.GetStatus() -eq "Running" -and $_.Speed_Live -gt 0) {$_.Speed_Live | ForEach-Object {"$($_ | ConvertTo-Hash)/s"}}}; Align = 'right'}, 
         @{Label = "Active"; Expression = {"{0:dd} Days {0:hh} Hours {0:mm} Minutes" -f $_.GetActiveTime()}}, 
@@ -595,7 +595,7 @@ while ($true) {
     ) | Out-Host
 
     #Display watchdog timers
-    $WatchdogTimers | Where-Object Kicked -GT $Timer.AddSeconds( - $WatchdogReset) | Format-Table -Wrap (
+    $WatchdogTimers | Where-Object Kicked -GT $Timer.AddSeconds( - $WatchdogReset) | Format-Table (
         @{Label = "Miner"; Expression = {$_.MinerName}}, 
         @{Label = "Pool"; Expression = {$_.PoolName}}, 
         @{Label = "Algorithm"; Expression = {$_.Algorithm}}, 
