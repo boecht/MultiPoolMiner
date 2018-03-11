@@ -6,7 +6,7 @@
 @setx GPU_MAX_ALLOC_PERCENT 100
 @setx GPU_SINGLE_ALLOC_PERCENT 100
 
-@set "command=& .\multipoolminer.ps1 -wallet 18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW -username boecht -workername %COMPUTERNAME% -region europe -currency btc,usd,eur -type nvidia -watchdog -minerstatusurl https://multipoolminer.io/monitor/miner.php -switchingprevention 5 -ExcludeAlgorithm MyriadGroestl,Blakecoin,Lbry,Blake2s,Pascal,Keccak,DecredNiceHash,Decred,Sib,CryptoNight,Groestl,Sib,X11evo,Polytimos,HMQ1725,C11,Lyra2z,Ethash,Timetravel,X17,Tribus"
+@set "command=& .\multipoolminer.ps1 -wallet 18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW -username boecht -workername %COMPUTERNAME% -region europe -currency btc,usd,eur -type nvidia -watchdog -minerstatusurl https://multipoolminer.io/monitor/miner.php -switchingprevention 5 -ExcludeAlgorithm MyriadGroestl,Blakecoin,Lbry,Blake2s,Pascal,Keccak,DecredNiceHash,Decred,Sib,CryptoNight,Groestl,X11evo,Polytimos,HMQ1725,C11,Lyra2z,Ethash,Timetravel,Tribus"
 
 start /wait /b RemoveLogs.bat
 
