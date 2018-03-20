@@ -17,14 +17,8 @@ $Commands = [PSCustomObject]@{
     "hmq1725" = "" #HMQ1725
     "jha" = "" #JHA
     "keccak" = "" #Keccak
-<<<<<<< HEAD
     #"lbry" = "" #Lbry   <<<  ExcavatorNvidia2
     #"lyra2v2" = "" #Lyra2RE2
-=======
-    "keccakc" = "" #Keccakc
-    "lbry" = "" #Lbry
-    "lyra2v2" = "" #Lyra2RE2
->>>>>>> 1fb6e77978bf6b5fdb0bd7dc20f439551f16b33f
     "lyra2z" = "" #Lyra2z
     "myr-gr" = "" #MyriadGroestl
     #"neoscrypt" = "" #NeoScrypt
@@ -38,12 +32,8 @@ $Commands = [PSCustomObject]@{
     "tribus" = "" #Tribus
     "veltor" = "" #Veltor
     "x11evo" = "" #X11evo
-<<<<<<< HEAD
-    #"x17" = "" #X17   <<<  CcminerSp
-=======
     "x16r" = "" #Raven
-    "x17" = "" #X17
->>>>>>> 1fb6e77978bf6b5fdb0bd7dc20f439551f16b33f
+    #"x17" = "" #X17   <<<  CcminerSp
     #"yescrypt" = "" #Yescrypt
     #"xevan" = "" #Xevan
 }
