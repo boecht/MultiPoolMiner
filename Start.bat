@@ -10,8 +10,8 @@
 
 start /wait /b RemoveLogs.bat
 
-start pwsh -noexit -executionpolicy bypass -command "& .\reader.ps1 -log 'MultiPoolMiner_\d\d\d\d-\d\d-\d\d\.txt' -sort '^[^_]*_' -quickstart"
+start "C:\Program Files\PowerShell\6.0.2\pwsh.exe" -noexit -executionpolicy bypass -command "& .\reader.ps1 -log 'MultiPoolMiner_\d\d\d\d-\d\d-\d\d\.txt' -sort '^[^_]*_' -quickstart"
 
-pwsh -noexit -executionpolicy bypass -windowstyle maximized -command "%command%"
+"C:\Program Files\PowerShell\6.0.2\pwsh.exe" -noexit -executionpolicy bypass -windowstyle maximized -command "%command%"
 
 @pause
