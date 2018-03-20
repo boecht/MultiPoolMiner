@@ -1,7 +1,7 @@
 ﻿using module ..\Include.psm1
 
 $Path = ".\Bin\NVIDIA-TPruvot\ccminer-x64.exe"
-$Uri = "https://github.com/tpruvot/ccminer/releases/download/2.2.4-tpruvot/ccminer-x64-2.2.4-cuda9.7z"
+$Uri = "https://github.com/MSFTserver/ccminer/releases/download/2.2.5-rvn/ccminer-x64-2.2.5-rvn-cuda9.7z"
 
 $Commands = [PSCustomObject]@{
     "bitcore" = "" #Bitcore
@@ -17,8 +17,14 @@ $Commands = [PSCustomObject]@{
     "hmq1725" = "" #HMQ1725
     "jha" = "" #JHA
     "keccak" = "" #Keccak
+<<<<<<< HEAD
     #"lbry" = "" #Lbry   <<<  ExcavatorNvidia2
     #"lyra2v2" = "" #Lyra2RE2
+=======
+    "keccakc" = "" #Keccakc
+    "lbry" = "" #Lbry
+    "lyra2v2" = "" #Lyra2RE2
+>>>>>>> 1fb6e77978bf6b5fdb0bd7dc20f439551f16b33f
     "lyra2z" = "" #Lyra2z
     "myr-gr" = "" #MyriadGroestl
     #"neoscrypt" = "" #NeoScrypt
@@ -32,7 +38,12 @@ $Commands = [PSCustomObject]@{
     "tribus" = "" #Tribus
     "veltor" = "" #Veltor
     "x11evo" = "" #X11evo
+<<<<<<< HEAD
     #"x17" = "" #X17   <<<  CcminerSp
+=======
+    "x16r" = "" #Raven
+    "x17" = "" #X17
+>>>>>>> 1fb6e77978bf6b5fdb0bd7dc20f439551f16b33f
     #"yescrypt" = "" #Yescrypt
     #"xevan" = "" #Xevan
 }
