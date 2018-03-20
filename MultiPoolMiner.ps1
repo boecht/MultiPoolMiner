@@ -165,30 +165,6 @@ while ($true) {
         )
     }
 
-<<<<<<< HEAD
-    Get-ChildItem "Miners" | Where-Object {-not $Config.Miners.($_.BaseName)} | ForEach-Object {
-        $Config.Miners | Add-Member $_.BaseName (
-            [PSCustomObject]@{
-            }
-        )
-=======
-    #Activate or deactivate donation
-    if ($Config.Donate -lt 10) {$Config.Donate = 10}
-    if ($Timer.AddDays(-1) -ge $LastDonated) {$LastDonated = $Timer}
-    if ($Timer.AddDays(-1).AddMinutes($Config.Donate) -ge $LastDonated) {
-        Get-ChildItem "Pools" | ForEach-Object {
-            $Config.Pools | Add-Member $_.BaseName (
-                [PSCustomObject]@{
-                    BTC    = $WalletDonate
-                    User   = $UserNameDonate
-                    Worker = $WorkerNameDonate
-                }
-            ) -Force
-        }
-        $Config | Add-Member ExcludePoolName @() -Force
->>>>>>> 1fb6e77978bf6b5fdb0bd7dc20f439551f16b33f
-    }
-
     #Clear pool cache if the configuration has changed
     if (($ConfigBackup | ConvertTo-Json -Compress) -ne ($Config | ConvertTo-Json -Compress)) {$AllPools = $null}
 
