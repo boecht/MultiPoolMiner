@@ -32,7 +32,7 @@
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": "MyriadGroestl,Blakecoin,Lbry,Blake2s,Pascal,Keccak,DecredNiceHash,Decred,Sib,CryptoNight,Groestl,X11evo,Polytimos,HMQ1725,C11,Lyra2z,Ethash,Timetravel,Tribus",
   "ExcludeMinerName": "$ExcludeMinerName",
-  "ExcludePoolName": "$ExcludePoolName",
+  "ExcludePoolName": "Blockmunch,MiningPoolHubCoins,YiiMP,ZergPool",
   "Currency": "btc,usd,eur",
   "Donate": "$Donate",
   "Proxy": "$Proxy",
