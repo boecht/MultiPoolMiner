@@ -155,6 +155,15 @@ while ($true) {
         }
     }
 
+    #Error in Config.txt
+    if ($Config -isnot [PSCustomObject]) {
+        Write-Log -Level Error "*********************************************************** "
+        Write-Log -Level Error "Critical error: Config.txt is invalid. MPM cannot continue. "
+        Write-Log -Level Error "*********************************************************** "
+        Start-Sleep 10
+        Exit
+    }
+
     #For backwards compatibility, set the MinerStatusKey to $Wallet if it's not specified
     if ($Wallet -and -not $Config.MinerStatusKey) {$Config.MinerStatusKey = $Wallet}
 
@@ -208,7 +217,7 @@ while ($true) {
     Write-Log "Loading pool information. "
     $NewPools = @()
     if (Test-Path "Pools") {
-        $NewPools = Get-ChildItem "Pools" | Where-Object {$Config.Pools.$($_.BaseName)} | ForEach-Object {
+        $NewPools = Get-ChildItem "Pools" | Where-Object {$Config.Pools.$($_.BaseName) -and $Config.ExcludePoolName -inotcontains $_.BaseName} | ForEach-Object {
             $Pool_Name = $_.BaseName
             $Pool_Parameters = @{StatSpan = $StatSpan}
             $Config.Pools.$Pool_Name | Get-Member -MemberType NoteProperty | ForEach-Object {$Pool_Parameters.($_.Name) = $Config.Pools.$Pool_Name.($_.Name)}
