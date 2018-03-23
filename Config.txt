@@ -24,16 +24,47 @@
   "Miners": {
   },
   "Interval": "$Interval",
-  "Region": "europe",
+  "Region": "Europe",
   "SSL": "$SSL",
-  "Type": "nvidia",
+  "Type": [
+    "NVIDIA"
+  ],
   "Algorithm": "$Algorithm",
   "MinerName": "$MinerName",
   "PoolName": "$PoolName",
-  "ExcludeAlgorithm": "MyriadGroestl,Blakecoin,Lbry,Blake2s,Pascal,Keccak,DecredNiceHash,Decred,Sib,CryptoNight,Groestl,X11evo,Polytimos,HMQ1725,C11,Lyra2z,Ethash,Timetravel,Tribus",
+  "ExcludeAlgorithm": [
+    "Blake2s",
+    "Blakecoin",
+    "C11",
+    "CryptoNight",
+    "Decred",
+    "DecredNiceHash",
+    "Ethash",
+    "Groestl",
+    "HMQ1725",
+    "Keccak",
+    "Lbry",
+    "Lyra2z",
+    "MyriadGroestl",
+    "Pascal",
+    "Polytimos",
+    "Sib",
+    "Timetravel",
+    "Tribus",
+    "X11evo"
+  ],
   "ExcludeMinerName": "$ExcludeMinerName",
-  "ExcludePoolName": "Blockmunch,MiningPoolHubCoins,YiiMP,ZergPool",
-  "Currency": "btc,usd,eur",
+  "ExcludePoolName": [
+    "Blockmunch",
+    "MiningPoolHubCoins",
+    "YiiMP",
+    "ZergPool"
+  ],
+  "Currency": [
+    "BTC",
+    "USD",
+    "EUR"
+  ],
   "Donate": "$Donate",
   "Proxy": "$Proxy",
   "Delay": "$Delay",
