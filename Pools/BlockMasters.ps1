@@ -2,9 +2,9 @@
 
 param(
     [alias("Wallet")]
-    [String]$BTC, 
+    [String]$BTC,
     [alias("WorkerName")]
-    [String]$Worker, 
+    [String]$Worker,
     [TimeSpan]$StatSpan
 )
 
@@ -49,8 +49,8 @@ $BlockMasters_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore 
         "x11" {$Divisor *= 1000}
     }
 
-    if ((Get-Stat -Name "$($Name)_$($BlockMasters_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($BlockMasters_Algorithm_Norm)_Profit" -Value ([Double]$BlockMasters_Request.$_.estimate_last24h / $Divisor) -Duration (New-TimeSpan -Days 1)}
-    else {$Stat = Set-Stat -Name "$($Name)_$($BlockMasters_Algorithm_Norm)_Profit" -Value ([Double]$BlockMasters_Request.$_.estimate_current / $Divisor) -Duration $StatSpan -ChangeDetection $true}
+    if ((Get-Stat -Name "$($Name)_$($BlockMasters_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($BlockMasters_Algorithm_Norm)_Profit" -Value ([Double]$BlockMasters_Request.$_.estimate_last24h / $Divisor *(1-($BlockMasters_Request.$_.fees/100))) -Duration (New-TimeSpan -Days 1)}
+    else {$Stat = Set-Stat -Name "$($Name)_$($BlockMasters_Algorithm_Norm)_Profit" -Value ([Double]$BlockMasters_Request.$_.estimate_current / $Divisor *(1-($BlockMasters_Request.$_.fees/100))) -Duration $StatSpan -ChangeDetection $true}
 
     $BlockMasters_Regions | ForEach-Object {
         $BlockMasters_Region = $_
