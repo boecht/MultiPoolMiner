@@ -44,10 +44,11 @@ Function Write-Log {
         }
 
         # Attempt to aquire mutex, waiting up to 1 second if necessary.  If aquired, write to the log file and release mutex.  Otherwise, display an error.
-        if($mutex.WaitOne(1000)) {
+        if ($mutex.WaitOne(1000)) {
             "$date $LevelText $Message" | Out-File -FilePath $filename -Append -Encoding ascii
             $mutex.ReleaseMutex()
-        } else {
+        }
+        else {
             Write-Error -Message "Log file is locked, unable to write message to log."
         }
     }
@@ -494,6 +495,7 @@ class Miner {
     hidden [MinerStatus]$Status = [MinerStatus]::Idle
     $Benchmarked
     $LogFile
+    $Pool
 
     hidden StartMining() {
         $this.Status = [MinerStatus]::Failed
