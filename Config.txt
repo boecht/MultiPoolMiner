@@ -29,7 +29,7 @@
   "Type": [
     "NVIDIA"
   ],
-  "Algorithm": "$Algorithm",
+  "Algorithm": [ "X16R" ],
   "MinerName": "$MinerName",
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": [
