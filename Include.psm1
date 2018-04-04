@@ -113,7 +113,7 @@ function Set-Stat {
 
         if ($ChangeDetection -and [Decimal]$Value -eq [Decimal]$Stat.Live) {$Updated = $Stat.updated}
 
-        if ($Value -lt $ToleranceMin -or $Value -gt $ToleranceMax) {
+        if (($Value -lt $ToleranceMin -or $Value -gt $ToleranceMax) -and $Name -neq "x16r") {
             Write-Log -Level Warn "Stat file ($Name) was not updated because the value ($([Decimal]$Value)) is outside fault tolerance ($([Int]$ToleranceMin) to $([Int]$ToleranceMax)). "
         }
         else {
