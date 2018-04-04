@@ -68,7 +68,7 @@
   "Donate": "$Donate",
   "Proxy": "$Proxy",
   "Delay": "$Delay",
-  "Watchdog": "$true",
+  "Watchdog": "$false",
   "MinerStatusURL": "https://multipoolminer.io/monitor/miner.php",
   "MinerStatusKey": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
   "SwitchingPrevention": "5"
