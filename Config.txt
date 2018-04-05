@@ -55,6 +55,7 @@
   ],
   "ExcludeMinerName": "$ExcludeMinerName",
   "ExcludePoolName": [
+    "BlockMasters",
     "Blockmunch",
     "MiningPoolHubCoins",
     "YiiMP",
