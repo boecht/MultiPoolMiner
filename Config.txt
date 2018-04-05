@@ -29,7 +29,9 @@
   "Type": [
     "NVIDIA"
   ],
-  "Algorithm": [ "X16R" ],
+  "Algorithm": [
+    "X16R"
+  ],
   "MinerName": "$MinerName",
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": [
@@ -53,7 +55,9 @@
     "Tribus",
     "X11evo"
   ],
-  "ExcludeMinerName": "$ExcludeMinerName",
+  "ExcludeMinerName": [ 
+    "CcminerSuprMiner"
+  ],
   "ExcludePoolName": [
     "BlockMasters",
     "Blockmunch",
