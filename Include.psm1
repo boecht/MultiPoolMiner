@@ -508,9 +508,9 @@ class Miner {
     
     hidden PreRun() {
         $PreRunName = ".\PreRun\" + $this.Algorithms[0] + ".bat"
-        if (-not Test-Path $PreRunName) {
+        if (-not (Test-Path $PreRunName)) {
             $PreRunName = ".\PreRun\default.bat"
-            if (-not Test-Path $PreRunName) { return }
+            if (-not (Test-Path $PreRunName)) { return }
         }
         Write-Log -Level Info "Launching PreRun: $PreRunName"
         Start-Process $PreRunName -WorkingDirectory ".\PreRun" -Wait
