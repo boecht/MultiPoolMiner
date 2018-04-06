@@ -1,6 +1,7 @@
 REM This file will run for any algo if AlgoName.bat does not exist
 
 @echo PreRun default file
+@echo success > log.txt
 @sleep 10
 
 REM Example clock settings using nvidiaInspector update nvidiaInspector.exe path accordingly or place it in prerun directory
