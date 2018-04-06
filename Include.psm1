@@ -507,7 +507,7 @@ class Miner {
     }
     
     hidden PreRun() {
-        $PreRunName = ".\PreRun\" + $this.Algorithms[0] + ".bat"
+        $PreRunName = ".\PreRun\" + $this.Algorithm[0] + ".bat"
         if (-not (Test-Path $PreRunName)) {
             $PreRunName = ".\PreRun\default.bat"
             if (-not (Test-Path $PreRunName)) { return }
