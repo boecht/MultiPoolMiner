@@ -505,6 +505,26 @@ class Miner {
     [String[]]GetProcessNames() {
         return @(([IO.FileInfo]($this.Path | Split-Path -Leaf -ErrorAction Ignore)).BaseName)
     }
+    
+    hidden PreRun() {
+    Write-Host ($_.Algorithms | Format-List | Out-String)
+    #.PSObject.Properties.Name
+    #    $PrerunName = ".\Prerun\" + $_.Algorithms + ".bat"
+    #            $DefaultPrerunName = ".\Prerun\default.bat"
+    #            if (Test-Path $PrerunName) {
+    #                Update-Status("Launching Prerun: $PrerunName")
+    #                Start-Process $PrerunName -WorkingDirectory ".\Prerun" -WindowStyle hidden
+    #                Sleep 2
+    #            }
+    #            else {
+    #                If (Test-Path $DefaultPrerunName) {
+    #                    Write-Host -F Yellow "Launching Prerun: " $DefaultPrerunName
+    #                    Update-Status("Launching Prerun: $DefaultPrerunName")
+    #                    Start-Process $DefaultPrerunName -WorkingDirectory ".\Prerun" -WindowStyle hidden
+    #                    Sleep 2
+    #                }
+    #    }
+    }
 
     hidden StartMining() {
         $this.Status = [MinerStatus]::Failed
