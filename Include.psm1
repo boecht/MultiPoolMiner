@@ -381,14 +381,14 @@ function Expand-WebRequest {
     Invoke-WebRequest $Uri -OutFile $FileName -UseBasicParsing
 
     if (".msi", ".exe" -contains ([IO.FileInfo](Split-Path $Uri -Leaf)).Extension) {
-        Start-Process $FileName "-qb" | WaitForExit
+        Start-Process $FileName "-qb" | Wait-Process -Timeout 180
     }
     else {
         $Path_Old = (Join-Path (Split-Path $Path) ([IO.FileInfo](Split-Path $Uri -Leaf)).BaseName)
         $Path_New = (Join-Path (Split-Path $Path) (Split-Path $Path -Leaf))
 
         if (Test-Path $Path_Old) {Remove-Item $Path_Old -Recurse -Force}
-        Start-Process "7z" "x `"$([IO.Path]::GetFullPath($FileName))`" -o`"$([IO.Path]::GetFullPath($Path_Old))`" -y -spe" | WaitForExit
+        Start-Process "7z" "x `"$([IO.Path]::GetFullPath($FileName))`" -o`"$([IO.Path]::GetFullPath($Path_Old))`" -y -spe" | Wait-Process -Timeout 180
 
         if (Test-Path $Path_New) {Remove-Item $Path_New -Recurse -Force}
         if (Get-ChildItem $Path_Old | Where-Object PSIsContainer -EQ $false) {
@@ -513,7 +513,7 @@ class Miner {
             if (-not (Test-Path $PreRunName)) { return }
         }
         Write-Log -Level Info "Launching PreRun: $PreRunName"
-        Start-Process -FilePath $PreRunName | WaitForExit
+        Start-Process -FilePath $PreRunName | Wait-Process -Timeout 30
     }
 
     hidden StartMining() {
