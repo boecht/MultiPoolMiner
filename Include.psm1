@@ -507,7 +507,7 @@ class Miner {
     }
     
     hidden PreRun() {
-    Write-Host ($_.Algorithms | Format-List | Out-String)
+    Write-Log ($_.Algorithms | Format-List | Out-String)
     #.PSObject.Properties.Name
     #    $PrerunName = ".\Prerun\" + $_.Algorithms + ".bat"
     #            $DefaultPrerunName = ".\Prerun\default.bat"
