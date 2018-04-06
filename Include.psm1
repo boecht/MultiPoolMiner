@@ -614,6 +614,7 @@ class Miner {
 
         switch ($Status) {
             "Running" {
+                $this.PreRun()
                 $this.StartMining()
             }
             "Idle" {
