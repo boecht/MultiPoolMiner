@@ -1,9 +1,9 @@
-bin/
-stats/
-logs/
-wrapper/
-downloads/
+Bin/
+Stats/
+Logs/
+Wrapper/
+Downloads/
+PreRun/nvidiaProfileInspector/
 *.zip
 *.7z
 *.rar
-Pools/MiningDutch.ps1
