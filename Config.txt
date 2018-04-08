@@ -29,13 +29,10 @@
   "Type": [
     "NVIDIA"
   ],
-  "Algorithm": [
-    "X16R"
-  ],
+  "Algorithm": "$Algorithm",
   "MinerName": "$MinerName",
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": [
-    "Blake2s",
     "Blakecoin",
     "C11",
     "CryptoNight",
