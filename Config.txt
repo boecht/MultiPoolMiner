@@ -45,6 +45,7 @@
     "Lbry",
     "Lyra2z",
     "MyriadGroestl",
+    "Nist5",
     "Pascal",
     "Polytimos",
     "Sib",
