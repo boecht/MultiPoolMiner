@@ -5,7 +5,7 @@ $Uri = "https://github.com/MSFTserver/ccminer/releases/download/2.2.5-rvn/ccmine
 
 $Commands = [PSCustomObject]@{
     "bitcore" = "" #Bitcore
-    #"blake2s" = "" #Blake2s
+    "blake2s" = "" #Blake2s
     "blakecoin" = "" #Blakecoin
     "vanilla" = "" #BlakeVanilla
     #"c11" = "" #C11
