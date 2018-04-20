@@ -1,4 +1,4 @@
-sing module ..\Include.psm1
+using module ..\Include.psm1
 
 $Threads = 1
 
