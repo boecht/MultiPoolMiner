@@ -12,7 +12,7 @@ $Commands = [PSCustomObject]@{
     #"equihash" = @() #Equihash   <<<>>> DSTM / CRASH
     #"lbry" = @() #Lbry   <<< ExcavatorNvidia2
     "lyra2rev2" = @() #Lyra2RE2
-    #"neoscrypt" = @() #NeoScrypt   <<<  PalginNvidia
+    #"neoscrypt" = @() #NeoScrypt   <<<  PalginNvidia <<< ExcavatorNvidia2
     #"nist5" = @() #nist5   <<< ExcavatorNvidia2
     #"pascal" = @() #Pascal   <<< ExcavatorNvidia2
 }
