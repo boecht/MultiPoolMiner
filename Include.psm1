@@ -134,6 +134,7 @@ function Set-Stat {
                 Week_Fluctuation = 0.0
                 Duration = $Stat.Duration + $Duration
                 Updated = $Updated
+            }
         }
         else {
             $Span_Minute = [Math]::Min($Duration.TotalMinutes / [Math]::Min($Stat.Duration.TotalMinutes, 1), 1)
