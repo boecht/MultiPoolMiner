@@ -116,6 +116,25 @@ function Set-Stat {
         if (($Value -lt $ToleranceMin -or $Value -gt $ToleranceMax) -and $Name -notlike "*x16r*") {
             Write-Log -Level Warn "Stat file ($Name) was not updated because the value ($([Decimal]$Value)) is outside fault tolerance ($([Int]$ToleranceMin) to $([Int]$ToleranceMax)). "
         }
+        elseif ($Name -like "*x16r_HashRate") {
+            Write-Log -Level Warn "Stat file ($Name) was updated to current hashrate ($([Decimal]$Value)) ignoring all saved values. "
+            $Stat = [PSCustomObject]@{
+                Live = $Value
+                Minute = $Value
+                Minute_Fluctuation = 0.0
+                Minute_5 = $Value
+                Minute_5_Fluctuation = 0.0
+                Minute_10 = $Value
+                Minute_10_Fluctuation = 0.0
+                Hour = $Value
+                Hour_Fluctuation = 0.0
+                Day = $Value
+                Day_Fluctuation = 0.0
+                Week = $Value
+                Week_Fluctuation = 0.0
+                Duration = $Stat.Duration + $Duration
+                Updated = $Updated
+        }
         else {
             $Span_Minute = [Math]::Min($Duration.TotalMinutes / [Math]::Min($Stat.Duration.TotalMinutes, 1), 1)
             $Span_Minute_5 = [Math]::Min(($Duration.TotalMinutes / 5) / [Math]::Min(($Stat.Duration.TotalMinutes / 5), 1), 1)
