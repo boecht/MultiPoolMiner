@@ -61,8 +61,7 @@
     "Blockmunch",
     "MiningPoolHubCoins",
     "YiiMP",
-    "ZergPool",
-    "Zpool"
+    "ZergPool"
   ],
   "Currency": [
     "BTC",
