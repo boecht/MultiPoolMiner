@@ -659,6 +659,9 @@ while ($true) {
     }
     Write-Log "Finish waiting before next run. "
 
+    #Check if GPUs are still available or have crashed/dropped out
+    Start-Process -FilePath ".\gpucheck.bat" -PassThru | Wait-Process -Timeout 90
+
     #Save current hash rates
     Write-Log "Saving hash rates. "
     $ActiveMiners | ForEach-Object {
