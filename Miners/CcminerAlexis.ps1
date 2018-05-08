@@ -1,52 +1,29 @@
 using module ..\Include.psm1
 
-$Path = ".\Bin\NVIDIA-Nanashi\ccminer.exe"
-$HashSHA256 = "1974bab01a30826497a76b79e227f3eb1c9eb9ffa6756c801fcd630122bdb5c7"
-$URI = "https://github.com/Nanashi-Meiyo-Meijin/ccminer/releases/download/v2.2-mod-r2/2.2-mod-r2-CUDA9.binary.zip"
+$Path = ".\Bin\NVIDIA-Alexis78hsr\ccminer-alexis.exe"
+$Uri = "https://github.com/nemosminer/ccminer-hcash/releases/download/alexishsr/ccminer-hsr-alexis-x86-cuda8.7z"
 
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
-    "bastion" = "" #bastion
-    "bitcore" = "" #Bitcore
-    "bmw" = "" #bmw
-    #"c11" = "" #C11
-    "deep" = "" #deep
-    "dmd-gr" = "" #dmd-gr
-    "equihash" = "" #Equihash
-    "fresh" = "" #fresh
-    "fugue256" = "" #Fugue256
-    "groestl" = "" #Groestl
-    "heavy" = "" #heavy
-    "hmq1725" = "" #HMQ1725
-    "jha" = "" #JHA
+    "c11" = "" #c11
+    "hsr" = "" #HSR, HShare
     "keccak" = "" #Keccak
-    #"keccakc" = "" #keccakc NOT supported
-    "luffa" = "" #Luffa
-    "lyra2" = "" #lyra2re
-    #"lyra2v2" = "" #Lyra2RE2   <<<   CcminerLyra2RE2
-    "lyra2z" = "" #Lyra2z, ZCoin
-    "mjollnir" = "" #Mjollnir
-    #"neoscrypt" = "" #NeoScrypt   <<< PalginNvidia <<< ExcavatorNvidia1
-    "penta" = "" #Pentablake
-    "scryptjane:nf" = "" #scryptjane:nf
-    "sha256t" = "" #sha256t
+    "lyra2" = "" #Lyra2
+    "lyra2v2" = "" #lyra2v2
+    #"neoscrypt" = "" #NeoScrypt
     #"skein" = "" #Skein
     "skein2" = "" #skein2
-    "skunk" = "" #Skunk
-    "s3" = "" #S3
-    "timetravel" = "" #Timetravel
-    "tribus" = "" #Tribus
     "veltor" = "" #Veltor
+    #"whirlcoin" = "" #WhirlCoin
     #"whirlpool" = "" #Whirlpool
-    "wildkeccak" = "" #wildkeccak
+    #"whirlpoolx" = "" #whirlpoolx
     "x11evo" = "" #X11evo
     "x17" = "" #x17
-    "zr5" = "" #zr5
 
-    # ASIC - never profitable 27/03/2018
+    # ASIC - never profitable 20/04/2018
+    #"blake2s" = "" #Blake2s
     #"blake" = "" #blake
     #"blakecoin" = "" #Blakecoin
-    #"blake2s" = "" #Blake2s
     #"cryptolight" = "" #cryptolight
     #"cryptonight" = "" #CryptoNight
     #"decred" = "" #Decred
@@ -60,7 +37,6 @@ $Commands = [PSCustomObject]@{
     #"sha256d" = "" #sha256d
     #"sia" = "" #SiaCoin
     #"sib" = "" #Sib
-    #"vanilla" = "" #BlakeVanilla
     #"x11" = "" #X11
     #"x13" = "" #x13
     #"x14" = "" #x14
