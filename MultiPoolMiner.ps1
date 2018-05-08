@@ -51,9 +51,9 @@ param(
     [Parameter(Mandatory = $false)]
     [Switch]$Watchdog = $false,
     [Parameter(Mandatory = $false)]
-    [Array]$ExcludeWatchdogAlgorithm = @("X16R"), #Do not use watchdog for these algorithms, e.g due to its nature X16R will always trigger watchdog
+    [Array]$WatchdogExcludeAlgorithm = @("X16R"), #Do not use watchdog for these algorithms, e.g due to its nature X16R will always trigger watchdog
     [Parameter(Mandatory = $false)]
-    [Array]$ExcludeWatchdogMinerName = @(), #Do not use watchdog for these miners
+    [Array]$WatchdogExcludeMinerName = @(), #Do not use watchdog for these miners
     [Parameter(Mandatory = $false)]
     [Alias("Uri", "Url")]
     [String]$MinerStatusUrl = "", #i.e https://multipoolminer.io/monitor/miner.php
@@ -595,7 +595,7 @@ while ($true) {
                 $Miner_Name = $_.Name
                 $_.Algorithm | ForEach-Object {
                     $Miner_Algorithm = $_
-                    if ($Config.ExcludeWatchdogAlgorithm -inotcontains $Miner_Algorithm -and $Config.ExcludeWatchdogMinerName -inotcontains $Miner_Name) {
+                    if ($Config.WatchdogExcludeAlgorithm -inotcontains $Miner_Algorithm -and $Config.WatchdogExcludeMinerName -inotcontains $Miner_Name) {
                         $WatchdogTimer = $WatchdogTimers | Where-Object {$_.MinerName -eq $Miner_Name -and $_.PoolName -eq $Pools.$Miner_Algorithm.Name -and $_.Algorithm -eq $Miner_Algorithm}
                         if (-not $WatchdogTimer) {
                             $WatchdogTimers += [PSCustomObject]@{
