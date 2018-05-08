@@ -72,6 +72,10 @@
   "Proxy": "$Proxy",
   "Delay": "$Delay",
   "Watchdog": "$false",
+  "WatchdogExcludeAlgorithm": [ 
+    "X16R"
+  ],
+  "WatchdogExcludeMinerName": "$WatchdogExcludeMinerName",
   "MinerStatusURL": "https://multipoolminer.io/monitor/miner.php",
   "MinerStatusKey": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
   "SwitchingPrevention": "5"
