@@ -7,7 +7,7 @@ $Uri = "https://github.com/nemosminer/ccminer-hcash/releases/download/alexishsr/
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
     "c11" = "" #c11
-    "hsr" = "" #HSR, HShare
+    #"hsr" = "" #HSR, HShare   <<< PalginNvidia
     "keccak" = "" #Keccak
     "lyra2" = "" #Lyra2
     "lyra2v2" = "" #lyra2v2
