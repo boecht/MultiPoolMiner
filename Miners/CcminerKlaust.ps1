@@ -12,12 +12,11 @@ $Commands = [PSCustomObject]@{
     "fresh" = "" #fresh
     "fugue256" = "" #Fugue256
     "groestl" = "" #Groestl
-    #"neoscrypt" = "" #NeoScrypt   <<< CcminerNanashi <<< PalginNvidia <<< ExcavatorNvidia1
     "jackpot" = "" #Jackpot
     "keccak" = "" #Keccak
     "luffa" = "" #Luffa
-    "lyra2v2" = "" #Lyra2RE2
-    "neoscrypt" = "" #NeoScrypt
+    #"lyra2v2" = "" #Lyra2RE2   <<< ExcavatorNvidia1 <<< ExcavatorNvidia2
+    #"neoscrypt" = "" #NeoScrypt   <<< CcminerNanashi <<< PalginNvidia <<< ExcavatorNvidia1
     "penta" = "" #Pentablake
     "skein" = "" #Skein
     "s3" = "" #S3
@@ -25,7 +24,7 @@ $Commands = [PSCustomObject]@{
     "veltor" = "" #Veltor
     #"whirlpool" = "" #Whirlpool
     #"whirlpoolx" = "" #whirlpoolx
-    "X17" = "" #X17 Verge
+    #"X17" = "" #X17 Verge   <<< CcminerSp <<< CcminerNanashi
 
     # ASIC - never profitable 20/04/2018
     #"blake" = "" #blake
