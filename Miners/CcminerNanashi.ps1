@@ -7,12 +7,12 @@ $URI = "https://github.com/Nanashi-Meiyo-Meijin/ccminer/releases/download/v2.2-m
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
     "bastion" = "" #bastion
-    "bitcore" = "" #Bitcore
+    #"bitcore" = "" #Bitcore   <<< CcminerTpruvot
     "bmw" = "" #bmw
     #"c11" = "" #C11
     "deep" = "" #deep
     "dmd-gr" = "" #dmd-gr
-    "equihash" = "" #Equihash
+    #"equihash" = "" #Equihash   <<< Dstm
     "fresh" = "" #fresh
     "fugue256" = "" #Fugue256
     "groestl" = "" #Groestl
