@@ -1,12 +1,24 @@
-using module ..\Include.psm1
+ using module ..\Include.psm1
 
-$Path = ".\Bin\NVIDIA-Nevermore\ccminer.exe"
-$HashSHA256 = "1A680F1853F003D8E7D1A957C78B2BE09A47039E2C437A846C71B62CA34BE22E"
-$Uri = "https://github.com/brian112358/nevermore-miner/releases/download/v0.2.2/nevermore-v0.2.2-win64.zip"
+$Path = ".\Bin\NVIDIA-Zealot\z-enemy.exe"
+$HashSHA256 = "59e413741711e2984a1911db003fee807941f9a9f838cb96ff050194bc74bfce"
+$Uri = "https://github.com/MultiPoolMiner/miner-binaries/releases/download/zenemy108/z-enemy-1.08-release.zip"
+#$ManualUri = "https://mega.nz/#!5WACFRTT!tV1vUsFdBIDqCzBrcMoXVR2G9YHD6xqct5QB2nBiuzM"
 
 $Commands = [PSCustomObject]@{
-    "X16r" = "" #X16r RavenCoin
-    "X16s" = "" #X16s PigeonCoin
+    "bitcore" = "" #Bitcore
+    "jha" = "" #JHA - NOT TESTED
+    "phi" = "" #PHI
+    "poly" = "" #Polytmos - NOT TESTED
+    "veltor" = "" #Veltor - NOT TESTED
+    "x12" = "" #X12 - NOT TESTED
+    "x14" = "" #X14 - NOT TESTED
+    "x16r" = "" #Rave
+    "x16s" = "" #Pigeon
+    # ASIC - never profitable 20/04/2018
+    #"cryptonight" = "" #CryptoNight - NOT TESTED
+    #"decred" = "" #Decred - NOT TESTED
+    #"vanilla" = "" #BlakeVanilla - NOT TESTED
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
@@ -21,7 +33,5 @@ $Commands | Get-Member -MemberType NoteProperty | Select-Object -ExpandProperty 
         API = "Ccminer"
         Port = 4068
         URI = $Uri
-        PrerequisitePath = "$env:SystemRoot\System32\msvcr120.dll"
-        PrerequisiteURI = "http://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe"
     }
-}
+} 
