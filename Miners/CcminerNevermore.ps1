@@ -6,7 +6,7 @@ $Uri = "https://github.com/nemosminer/ccminerx16r-x16s/releases/download/x16rx16
 
 $Commands = [PSCustomObject]@{
     "X16r" = "" #X16r RavenCoin
-    "X16s" = "" #X16s PigeonCoin
+    #"X16s" = "" #X16s PigeonCoin   <<< ccminerZealot
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
