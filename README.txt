@@ -17,7 +17,7 @@ TWITTER: @multipoolminer
 Licensed under the GNU General Public License v3.0
 Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. https://github.com/MultiPoolMiner/MultiPoolMiner/blob/master/LICENSE
 
-README.txt - updated on 09/05/2018 (dd/mm/yyyy) - v1.23.02 - latest version can be found here: https://github.com/MultiPoolMiner/MultiPoolMiner/blob/master/README.txt
+README.txt - updated on 09/05/2018 (dd/mm/yyyy) - v1.23.03 - latest version can be found here: https://github.com/MultiPoolMiner/MultiPoolMiner/blob/master/README.txt
 
 ====================================================================
 
@@ -75,7 +75,7 @@ COMMAND LINE OPTIONS (case-insensitive - except for BTC addresses, see Sample Us
 -region [Europe/US/Asia]
 	Choose your region or the region closest to you.
 
--poolname [ahashpool, ahashpoolcoins, blazepool, blockmasters, blockmasterscoins, hashrefinery, miningpoolhub, miningpoolhubcoins, nicehash, yiimp, zergpool, ZergPoolCoins, zpool]
+-poolname [ahashpool, ahashpoolcoins, blazepool, blockmasters, blockmasterscoins, hashrefinery, miningpoolhub, miningpoolhubcoins, nicehash, yiimp, zergpool, zergpoolcoins, zpool]
 	The following pools are currently supported (in alphabetical order): 
 
     ## AHashPool / AHashPoolCoins
@@ -203,6 +203,9 @@ COMMAND LINE OPTIONS (case-insensitive - except for BTC addresses, see Sample Us
 -disableautoupdate
 	By default MPM will perform an automatic update on startup if a newer version is found. Set to 'true' to disable automatic update to latest MPM version. 
 
+-ShowMinerWindow
+	By default MPM hides most miner windows as to not steal focus. All miners write their output to files in the Log folder. Set to 'true' to show miner windows (old MPM behaviour).
+
 	
 ====================================================================
 
@@ -240,6 +243,9 @@ ADVANCED CONFIGURATION
 Advanced config options are available via Config.txt
 
 Current versions support advanced configuration via 'Config.txt' in the MPM main directory.
+
+If Config.txt does not exist, copy Config.default.txt and rename to Config.txt
+
 Config.txt is a JSON file and human readable / editable. A good primer for understanding the JSON structure can be found here: https://www.tutorialspoint.com/json/index.htm
 
 Warning: The JSON file structure is very fragile - every comma counts, so be careful when editing this file manually. To test the validity of the structure use a web service like https://codebeautify.org/jsonviewer/ (copy/paste the complete file).
@@ -319,6 +325,24 @@ E.g. to change the payout currency for Zpool to LiteCoin replace the line for BT
         "Worker": "$WorkerName"
     }
 
+
+Advanced general configuration
+
+Settings in this section affect the overall behaviour of MPM.
+
+To show miner windows
+
+By default MPM hides most miner windows as to not steal focus. All miners write their output to files in the Log folder.
+Note: Showing the miner windows disables writing the miner output to log files.
+
+To show the miner windows add '"ShowMinerWindow":  true' to the general section in Config.txt:
+
+{
+    ...
+    "SwitchingPrevention":  "$SwitchingPrevention",
+    "ShowMinerWindow":  true,
+    ...
+}
 
 ====================================================================
 
@@ -509,5 +533,3 @@ PID: process ID of the miner application being used
 BTC/day: Estimated Bitcoin earnings per day
 
 The monitoring service can change, evolve, be unavailable any time without prior notice. The contents of the database will NOT be shared with any third-parties but we reserve the right to create metrics out of it and use its contents to improve or promote our services and MultiPoolMiner. Credits to @grantemsley for the codebase.
-
-

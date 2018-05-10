@@ -7,7 +7,7 @@
 
 ###### Licensed under the GNU General Public License v3.0 - Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. https://github.com/MultiPoolMiner/MultiPoolMiner/blob/master/LICENSE
 
-README.md is based on README.txt - updated on 09/05/2018 - v1.23.02 - latest version can be found here: https://github.com/MultiPoolMiner/MultiPoolMiner/blob/master/README.txt
+README.md is based on README.txt - updated on 09/05/2018 - v1.23.03 - latest version can be found here: https://github.com/MultiPoolMiner/MultiPoolMiner/blob/master/README.txt
 
 
 
@@ -193,6 +193,9 @@ Since version 2.6, the delta value (integer) that was used to determine how ofte
 **-disableautoupdate**
 By default MPM will perform an automatic update on startup if a newer version is found. Set to 'true' to disable automatic update to latest MPM version. 
 
+**-ShowMinerWindow
+By default MPM hides most miner windows as to not steal focus. All miners write their output to files in the Log folder. Set to 'true' to show miner windows (old MPM behaviour).
+
 
 ##SAMPLE USAGE
 #####(check "start.bat" file in root folder)
@@ -225,6 +228,8 @@ pause
 ### Advanced config options are available via Config.txt
 
 Current versions support advanced configuration via 'Config.txt' in the MPM main directory.
+
+If Config.txt does not exist, copy Config.default.txt and rename to Config.txt
 
 Config.txt is a JSON file and human readable / editable. A good primer for understanding the JSON structure can be found here: https://www.tutorialspoint.com/json/index.htm
 
@@ -307,6 +312,24 @@ E.g. to change the payout currency for Zpool to LiteCoin replace the line for BT
         "Worker": "$WorkerName"
     }
     
+
+### Advanced general configuration
+
+Settings in this section affect the overall behaviour of MPM.
+
+#### To show miner windows
+
+By default MPM hides most miner windows as to not steal focus. All miners write their output to files in the Log folder.
+
+To show the miner windows add '"ShowMinerWindow":  true' to the general section in Config.txt:
+Note: Showing the miner windows disables writing the miner output to log files.
+
+{
+    ...
+    "SwitchingPrevention":  "$SwitchingPrevention",
+    "ShowMinerWindow":  true,
+    ...
+}
 
 
 ## MULTIPOOLMINER'S LOGIC

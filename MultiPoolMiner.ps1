@@ -62,7 +62,9 @@ param(
     [Parameter(Mandatory = $false)]
     [Double]$SwitchingPrevention = 1, #zero does not prevent miners switching
     [Parameter(Mandatory = $false)]
-    [Switch]$DisableAutoUpdate = $false
+    [Switch]$DisableAutoUpdate = $false,
+    [Parameter(Mandatory = $false)]
+    [Switch]$ShowMinerWindow = $false #if true all miner windows will be visible (they can steal focus)
 )
 
 $Version = "2.7.2.7"
@@ -115,6 +117,17 @@ Start-APIServer
 $API.Version = $Version
 $API.Devices = $Devices #Give API access to the device information  
 
+# Create config.txt if it is missing
+if (!Test-Path "Config.txt") {
+    if(Test-Path "Config.default.txt") {
+        Copy-Item -Path "Config.default.txt" -Destination "Config.txt"
+    } else {
+        Write-Log -Level Error "Config.txt and Config.default.txt are missing. Cannot continue. "
+        Start-Sleep 10
+        Exit
+    }
+}
+
 while ($true) {
     #Load the config
     $ConfigBackup = $Config
@@ -145,33 +158,8 @@ while ($true) {
             MinerStatusURL           = $MinerStatusURL
             MinerStatusKey           = $MinerStatusKey
             SwitchingPrevention      = $SwitchingPrevention
+            ShowMinerWindow          = $ShowMinerWindow
         } | Select-Object -ExpandProperty Content
-    }
-    else {
-        $Config = [PSCustomObject]@{
-            Pools                    = [PSCustomObject]@{}
-            Miners                   = [PSCustomObject]@{}
-            Interval                 = $Interval
-            Region                   = $Region
-            SSL                      = $SSL
-            Type                     = $Type
-            Algorithm                = $Algorithm
-            MinerName                = $MinerName
-            PoolName                 = $PoolName
-            ExcludeAlgorithm         = $ExcludeAlgorithm
-            ExcludeMinerName         = $ExcludeMinerName
-            ExcludePoolName          = $ExcludePoolName
-            Currency                 = $Currency
-            Donate                   = $Donate
-            Proxy                    = $Proxy
-            Delay                    = $Delay
-            Watchdog                 = $Watchdog
-            WatchdogExcludeAlgorithm = $WatchdogExcludeAlgorithm
-            WatchdogExcludeMinerName = $WatchdogExcludeMinerName
-            MinerStatusURL           = $MinerStatusURL
-            MinerStatusKey           = $MinerStatusKey
-            SwitchingPrevention      = $SwitchingPrevention
-        }
     }
 
     #Only use configured types that are present in system
@@ -179,9 +167,7 @@ while ($true) {
 
     #Error in Config.txt
     if ($Config -isnot [PSCustomObject]) {
-        Write-Log -Level Error "*********************************************************** "
-        Write-Log -Level Error "Critical error: Config.txt is invalid. MPM cannot continue. "
-        Write-Log -Level Error "*********************************************************** "
+        Write-Log -Level Error "Config.txt is invalid. Cannot continue. "
         Start-Sleep 10
         Exit
     }
@@ -485,6 +471,7 @@ while ($true) {
                 New                  = $false
                 Benchmarked          = 0
                 Pool                 = $Miner.Pools.PSObject.Properties.Value.Name
+                ShowMinerWindow      = $Config.ShowMinerWindow
             }
         }
     }
