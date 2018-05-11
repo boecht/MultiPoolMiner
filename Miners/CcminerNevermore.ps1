@@ -2,11 +2,11 @@ using module ..\Include.psm1
 
 $Path = ".\Bin\NVIDIA-Nevermore\ccminer.exe"
 $HashSHA256 = "62489722C44CDAD3DF4C22E46A2A16A3E8A81E273D562C7C25398F77684A1C11"
-$Uri = "https://github.com/nemosminer/ccminernevermorex16r/releases/download/nevermorex16rv0.3/ccminernevermorex16rx64v0.3.zip"
+$Uri = "https://github.com/nemosminer/ccminerx16r-x16s/releases/download/x16rx16sv0.4/ccminerx16rx16sv0.4.zip"
 
 $Commands = [PSCustomObject]@{
     "X16r" = "" #X16r RavenCoin
-    #"X16s" = "" #X16s PigeonCoin
+    #"X16s" = "" #X16s PigeonCoin   <<< ccminerZealot
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
