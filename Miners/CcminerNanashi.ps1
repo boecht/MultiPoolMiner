@@ -40,7 +40,7 @@ $Commands = [PSCustomObject]@{
     #"whirlpool" = "" #Whirlpool
     "wildkeccak" = "" #wildkeccak
     "x11evo" = "" #X11evo
-    "x17" = "" #x17
+    #"x17" = "" #x17   <<< CcminerZealot.ps1
     "zr5" = "" #zr5
 
     # ASIC - never profitable 27/03/2018
