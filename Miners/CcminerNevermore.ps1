@@ -71,8 +71,6 @@ $Commands = [PSCustomObject]@{
     "s3" = "" #S3 (1Coin)
     "whirlcoin" = "" #Old Whirlcoin (Whirlpool algo)
     "whirlpool" = "" #Whirlpool algo
-    "x11evo" = "" #Permuted x11 (Revolver)
-    "x17" = "" #X17
     "wildkeccak" = "" #Boolberry
     "zr5" = "" #ZR5 (ZiftrCoin)
 }
