@@ -23,6 +23,11 @@
   },
   "Miners": {
   },
+  "Wallet": "$Wallet",
+  "UserName": "$UserName",
+  "WorkerName": "$WorkerName",
+  "API_ID": "$API_ID",
+  "API_Key": "$API_Key",
   "Interval": "$Interval",
   "Region": "Europe",
   "SSL": "$SSL",
@@ -32,33 +37,9 @@
   "Algorithm": "$Algorithm",
   "MinerName": "$MinerName",
   "PoolName": "$PoolName",
-  "ExcludeAlgorithm": [
-    "Blakecoin",
-    "C11",
-    "CryptoNight",
-    "Decred",
-    "DecredNiceHash",
-    "Ethash",
-    "Groestl",
-    "HMQ1725",
-    "Keccak",
-    "Lbry",
-    "Lyra2z",
-    "MyriadGroestl",
-    "Nist5",
-    "Pascal",
-    "Polytimos",
-    "Sib",
-    "Timetravel",
-    "Tribus",
-    "X11evo"
-  ],
-  "ExcludeMinerName": [ 
-    "CcminerSuprMiner"
-  ],
+  "ExcludeAlgorithm": "$ExcludeAlgorithm",
+  "ExcludeMinerName": "$ExcludeMinerName",
   "ExcludePoolName": [
-    "BlockMasters",
-    "Blockmunch",
     "MiningPoolHubCoins",
     "YiiMP",
     "ZergPool"
@@ -78,5 +59,6 @@
   "WatchdogExcludeMinerName": "$WatchdogExcludeMinerName",
   "MinerStatusURL": "https://multipoolminer.io/monitor/miner.php",
   "MinerStatusKey": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
-  "SwitchingPrevention": "5"
+  "SwitchingPrevention": "5",
+  "ShowMinerWindow": "$ShowMinerWindow"
 }
