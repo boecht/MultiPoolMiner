@@ -127,7 +127,6 @@
     "shabal256":  "Axiom",
     "shavite3":  "shavite3",
     "sia":  "sia",
-    "sia":  "Sia",
     "siacoin":  "sia",
     "sib":  "Sib",
     "sibcoinmod":  "Sib",

@@ -1,38 +1,51 @@
 ﻿using module ..\Include.psm1
 
-$Path = ".\Bin\NVIDIA-KlausT\ccminer.exe"
-$HashSHA256 = "EBF91E27F54DE29F158A4F5EBECEDB7E7E03EB9010331B2E949335BF1144A886"
-$Uri = "https://github.com/KlausT/ccminer/releases/download/8.21/ccminer-821-cuda91-x64.zip"
+$Path = ".\Bin\NVIDIA-SP\ccminer.exe"
+$HashSHA256 = "82477387C860517C5FACE8758BCB7AAC890505280BF713ACA9F86D7B306AC711"
+$Uri = "https://github.com/sp-hash/ccminer/releases/download/1.5.81/release81.7z"
 
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
+    "bastion" = "" #bastion
     "c11" = "" #C11
+    "credit" = "" #Credit
     "deep" = "" #deep
     "dmd-gr" = "" #dmd-gr
     "fresh" = "" #fresh
     "fugue256" = "" #Fugue256
     "groestl" = "" #Groestl
-    "jackpot" = "" #Jackpot
+    "heavy" = "" #heavy
+    "jackpot" = "" #JackPot
     "keccak" = "" #Keccak
     "luffa" = "" #Luffa
-    "lyra2v2" = "" #Lyra2RE2   <<< ExcavatorNvidia1 <<< ExcavatorNvidia2
-    "neoscrypt" = "" #NeoScrypt   <<< CcminerNanashi <<< PalginNvidia <<< ExcavatorNvidia1
-    "penta" = "" #Pentablake
+    "lyra2" = "" #lyra2h
+    "lyra2v2" = "" #Lyra2RE2
+    "mjollnir" = "" #Mjollnir
+    "neoscrypt" = "" #NeoScrypt
+    "pentablake" = "" #pentablake
+    "scryptjane:nf" = "" #scryptjane:nf
     "skein" = "" #Skein
-    "s3" = "" #S3   <<< no profit (sha256t)
-    "whirlpool" = "whirl" #Whirlpool
+    "s3" = "" #S3
+    "spread" = "" #Spread
+    "whirlpool" = "" #Whirlpool
     "whirlpoolx" = "" #whirlpoolx
-    "X17" = "" #X17 Verge   <<< CcminerSp <<< CcminerNanashi
+    "x17" = "" #x17
     
-    # ASIC - never profitable 20/04/2018
+    # ASIC - never profitable 27/03/2018
     #"blake" = "" #blake
     #"blakecoin" = "" #Blakecoin
+    #"blake2s" = "" #Blake2s
+    #"decred" = "" #Decred
+    #"lbry" = "" #Lbry
     #"myr-gr" = "" #MyriadGroestl
     #"nist5" = "" #Nist5
     #"quark" = "" #Quark
     #"qubit" = "" #Qubit
-    #"vanilla" = "" #BlakeVanilla
+    #"scrypt" = "" #Scrypt
+    #"scrypt:N" = "" #scrypt:N
+    #"sha256d" = "" #sha256d Bitcoin
     #"sia" = "" #SiaCoin
+    #"vanilla" = "" #BlakeVanilla
     #"x11" = "" #X11
     #"x13" = "" #x13
     #"x14" = "" #x14
@@ -46,7 +59,7 @@ $Commands | Get-Member -MemberType NoteProperty | Select-Object -ExpandProperty 
         Type = "NVIDIA"
         Path = $Path
         HashSHA256 = $HashSHA256
-        Arguments = "-a $_ -b 4068 -o $($Pools.(Get-Algorithm $_).Protocol)://$($Pools.(Get-Algorithm $_).Host):$($Pools.(Get-Algorithm $_).Port) -u $($Pools.(Get-Algorithm $_).User) -p $($Pools.(Get-Algorithm $_).Pass)$($Commands.$_)"
+        Arguments = "-a $_ -o $($Pools.(Get-Algorithm $_).Protocol)://$($Pools.(Get-Algorithm $_).Host):$($Pools.(Get-Algorithm $_).Port) -u $($Pools.(Get-Algorithm $_).User) -p $($Pools.(Get-Algorithm $_).Pass) -b 4068$($Commands.$_)"
         HashRates = [PSCustomObject]@{(Get-Algorithm $_) = $Stats."$($Name)_$(Get-Algorithm $_)_HashRate".Week}
         API = "Ccminer"
         Port = 4068

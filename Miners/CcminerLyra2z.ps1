@@ -1,28 +1,19 @@
 ﻿using module ..\Include.psm1
 
-$Path = ".\Bin\NVIDIA-SuprMiner\ccminer.exe"
-$HashSHA256 = "6DE5DC4F109951AE1591D083F5C2A6494C9B59470C15EF6FBE5D38C50625304B"
-$Uri = "https://github.com/ocminer/suprminer/releases/download/1.5/suprminer-1.5.7z"
+$Path = ".\Bin\Lyra2z-NVIDIA\ccminer.exe"
+$HashSHA256 = "F9A69BA3C00E80BBBE7054E8705FE07DC23B7C408FA5405B778441A24D1AD223"
+$Uri = "https://github.com/djm34/ccminer-msvc2015/releases/download/v0.3.0/ccminer.rar"
 
 $Commands = [PSCustomObject]@{
-    "bitcore"   = "" #Bitcore
     "c11"       = "" #C11
     "groestl"   = "" #Groestl
-    "hmq1725"   = "" #HMQ1725
-    "hsr"       = "" #HSR
     "keccak"    = "" #Keccak
-    "keccakc"   = "" #Keccakc
+    "lyra2h"    = "" #Lyra2h
     "lyra2v2"   = "" #Lyra2RE2
     "lyra2z"    = "" #Lyra2z
     "neoscrypt" = "" #NeoScrypt
-    "phi"       = "" #PHI
     "skein"     = "" #Skein
-    "skunk"     = "" #Skunk
-    "timetravel"= "" #Timetravel
-    "tribus"    = "" #Tribus
     "x11evo"    = "" #X11evo
-    "x16r"      = "" #Raven
-    "x16s"      = "" #Pigeon
     "x17"       = "" #X17
     
     # ASIC - never profitable 12/05/2018
@@ -40,36 +31,30 @@ $Commands = [PSCustomObject]@{
     #"x14"      = "" #X14
     
     # MPM forgot these
-    "bastion"     = "" #Joincoin
-    #"blake"       = "" #Saffroncoin (Blake256)
-    "bmw"         = "" #Midnight
-    "cryptolight" = "" #AEON cryptonight (MEM/2)
-    "cryptonight" = "" #XMR cryptonight, Bytecoin, Dash, DigitalNote, etc
+    #"blake"       = "" #Blake 256 (SFR)
+    "bmw"         = "" #BMW 256
     "deep"        = "" #Deepcoin
     "dmd-gr"      = "" #Diamond-Groestl
-    "equihash"    = "" #ZEC, HUSH and KMD
-    "fresh"       = "" #Freshcoin
+    "fresh"       = "" #Freshcoin (shavite 80)
     "fugue256"    = "" #Fuguecoin
-    "jackpot"     = "" #Sweepcoin
+    "heavy"       = "" #Heavycoin
+    "jackpot"     = "" #Jackpot
     "luffa"       = "" #Joincoin
     "lyra2"       = "" #CryptoCoin
-    "penta"       = "" #Joincoin / Pentablake
-    "polytimos"   = "" #Polytimos
-    #"scrypt"      = "" #Scrypt coins (Litecoin, Dogecoin, etc)
-    #"scrypt:N"    = "" #Scrypt-N (:10 for 2048 iterations)
-    "scrypt-jane" = "" #Chacha coins like Cache and Ultracoin
-    "s3"          = "" #1coin (ONE)
-    "sha256t"     = "" #OneCoin (OC)
-    #"sia"         = "" #SIA
-    "skein2"      = "" #Woodcoin
-    #"x15"         = "" #Halcyon
-    #"vanilla"     = "" #Vanilla (Blake256)
-    "veltor"      = "" #VeltorCoin
-    "whirlpool"   = "" #Joincoin
-    "wildkeccak"  = "" #Boolberry (Stratum only)
-    "zr5"         = "" #ZiftrCoin
-    #"sha256d"     = "" #SHA256d (bitcoin)
+    "m7"          = "" #m7 (crytonite) hash
+    "mjollnir"    = "" #Mjollnircoin
+    "penta"       = "" #Pentablake hash (5x Blake 512)
+    #"sia"         = "" #SIA (Blake2B)
+    #"scrypt"      = "" #Scrypt
+    "scrypt-jane" = "" #Scrypt-jane Chacha
+    "skein2"      = "" #Double Skein (Woodcoin)
+    "s3"          = "" #S3 (1Coin)
+    #"vanilla"     = "" #Blake256-8 (VNL)
+    "veltor"      = "" #Thorsriddle streebog
     "whirlcoin"   = "" #Old Whirlcoin (Whirlpool algo)
+    "whirlpool"   = "" #Whirlpool algo
+    #"x15"         = "" #X15
+    "zr5"         = "" #ZR5 (ZiftrCoin)
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName

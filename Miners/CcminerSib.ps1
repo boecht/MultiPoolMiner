@@ -5,7 +5,37 @@ $HashSHA256 = "CD8602A080728894570C9D29FC1423FB62AF1FA9CAF3913E609BA21777284DEE"
 $Uri = "https://github.com/nicehash/ccminer-x11gost/releases/download/ccminer-x11gost_windows/ccminer_x11gost.7z"
 
 $Commands = [PSCustomObject]@{
-    "sib" = "" #Sib
+    "c11"       = "" #C11
+    "keccak"    = "" #Keccak
+    "lyra2v2"   = "" #Lyra2RE2
+    "neoscrypt" = "" #NeoScrypt
+    "skein"     = "" #Skein
+    "x11evo"    = "" #X11evo
+
+    # ASIC - never profitable 12/05/2018
+    #"blake2s"   = "" #Blake2s
+    #"blakecoin" = "" #Blakecoin
+    #"decred" = "" #Decred
+    #"lbry" = "" #Lbry
+    #"myr-gr" = "" #MyriadGroestl
+    #"nist5" = "" #Nist5
+    #"sib" = "" #Sib
+    
+    # MPM forgot these
+    #"blake"     = "" #Blake256-14rounds(SFR)
+    "vcash"     = "" #Blake256-8rounds (XVC)
+    "lyra2"     = "" #(LyraBar)
+    "skein2"    = "" #Double Skein (Woodcoin)
+    #"quark"     = "" #Quark (Quarkcoin)
+    #"qubit"     = "" #Qubit
+    #"x11"       = "" #X11 (DarkCoin)
+    #"x13"       = "" #X13 (MaruCoin)
+    #"x14"       = "" #X14 (BernCoin)
+    #"x15"       = "" #X15 (Joincoin)
+    "x17"       = "" #X17 (XVG)
+    "whirlpool" = "" #whirlpool (JoinCoin)
+    #"sia"       = "" #Sia (SIAcoin)
+    "veltor"    = "" #Thor's Riddle(?) (Veltor)
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName

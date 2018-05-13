@@ -6,7 +6,7 @@ $Uri = "https://github.com/MultiPoolMiner/miner-binaries/releases/download/zenem
 
 $Commands = [PSCustomObject]@{
     "bitcore" = "" #Bitcore
-    #"phi"     = "" #PHI   <<< CcminerAnxmodPhi
+    "phi"     = "" #PHI   <<< CcminerAnxmodPhi
     "x16r"    = "" #Raven
     "x16s"    = "" #Pigeon
     "x17"     = "" #X17

@@ -9,13 +9,21 @@ $Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.4a/excavato
 $Commands = [PSCustomObject]@{
     "blake2s" = @() #Blake2s
     "decred" = @() #Decred
-    #"daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
-    #"equihash" = @() #Equihash   BROKEN
+    "daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
+    "equihash" = @() #Equihash   BROKEN
     "lbry" = @() #Lbry
     "lyra2rev2" = @() #Lyra2RE2
-    #"neoscrypt" = @() #NeoScrypt   BROKEN
+    "neoscrypt" = @() #NeoScrypt   BROKEN
     #"nist5" = @() #nist5 is ASIC territory
     "pascal" = @() #Pascal
+    
+    # MPM forgot these
+    #"sia" = @() #sia
+    #"daggerhashimoto_decred" = @()
+    #"daggerhashimoto_sia" = @()
+    "daggerhashimoto_pascal" = @()
+    "cryptonight" = @() #CryptoNight
+    "keccak" = @() #Keccak
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName

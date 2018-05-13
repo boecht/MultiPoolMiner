@@ -7,12 +7,12 @@ $URI = "https://github.com/Nanashi-Meiyo-Meijin/ccminer/releases/download/v2.2-m
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
     "bastion" = "" #bastion
-    #"bitcore" = "" #Bitcore   <<< CcminerTpruvot
+    "bitcore" = "" #Bitcore   <<< CcminerTpruvot
     "bmw" = "" #bmw
-    #"c11" = "" #C11
+    "c11" = "" #C11
     "deep" = "" #deep
     "dmd-gr" = "" #dmd-gr
-    #"equihash" = "" #Equihash   <<< Dstm
+    "equihash" = "" #Equihash   <<< Dstm
     "fresh" = "" #fresh
     "fugue256" = "" #Fugue256
     "groestl" = "" #Groestl
@@ -20,29 +20,27 @@ $Commands = [PSCustomObject]@{
     "hmq1725" = "" #HMQ1725
     "jha" = "" #JHA
     "keccak" = "" #Keccak
-    #"keccakc" = "" #keccakc NOT supported
     "luffa" = "" #Luffa
     "lyra2" = "" #lyra2re
-    #"lyra2v2" = "" #Lyra2RE2   <<<   CcminerLyra2RE2
+    "lyra2v2" = "" #Lyra2RE2   <<<   CcminerLyra2RE2
     "lyra2z" = "" #Lyra2z, ZCoin
     "mjollnir" = "" #Mjollnir
-    #"neoscrypt" = "" #NeoScrypt   <<< PalginNvidia <<< ExcavatorNvidia1
+    "neoscrypt" = "" #NeoScrypt   <<< PalginNvidia <<< ExcavatorNvidia1
     "penta" = "" #Pentablake
-    "scryptjane:nf" = "" #scryptjane:nf
-    #"sha256t" = "" #sha256t   <<< no profit
-    #"skein" = "" #Skein
+    "sha256t" = "" #sha256t   <<< no profit
+    "skein" = "" #Skein
     "skein2" = "" #skein2
     "skunk" = "" #Skunk
-    #"s3" = "" #S3   <<< no profit (sha256t)
+    "s3" = "" #S3   <<< no profit (sha256t)
     "timetravel" = "" #Timetravel
     "tribus" = "" #Tribus
     "veltor" = "" #Veltor
-    #"whirlpool" = "" #Whirlpool
+    "whirlpool" = "" #Whirlpool
     "wildkeccak" = "" #wildkeccak
     "x11evo" = "" #X11evo
-    #"x17" = "" #x17   <<< CcminerZealot.ps1
+    "x17" = "" #x17   <<< CcminerZealot.ps1
     "zr5" = "" #zr5
-
+    
     # ASIC - never profitable 27/03/2018
     #"blake" = "" #blake
     #"blakecoin" = "" #Blakecoin
@@ -56,7 +54,6 @@ $Commands = [PSCustomObject]@{
     #"quark" = "" #Quark
     #"qubit" = "" #Qubit
     #"scrypt" = "" #Scrypt
-    #"scrypt:N" = "" #scrypt:N
     #"sha256d" = "" #sha256d
     #"sia" = "" #SiaCoin
     #"sib" = "" #Sib
@@ -65,6 +62,11 @@ $Commands = [PSCustomObject]@{
     #"x13" = "" #x13
     #"x14" = "" #x14
     #"x15" = "" #x15
+    
+    # MPM forgot these
+    "jackpot" = "" #Jackpotcoin
+    "scrypt-jane" = "" #Scrypt-jane Chacha
+    "whirlcoin" = "" #Old Whirlcoin (Whirlpool algo)
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName

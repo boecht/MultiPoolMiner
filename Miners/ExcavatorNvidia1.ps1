@@ -7,15 +7,23 @@ $HashSHA256 = "4CC2FF8C07F17E940A1965B8D0F7DD8508096A4E4928704912FA96C442346642"
 $Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.4a/excavator_v1.4.4a_NVIDIA_Win64.zip"
 
 $Commands = [PSCustomObject]@{
-    #"blake2s" = @() #Blake2s   <<< ExcavatorNvidia2
-    #"decred" = @() #Decred   <<< ExcavatorNvidia2
-    #"daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
-    #"equihash" = @() #Equihash   <<<>>> DSTM / CRASH
-    #"lbry" = @() #Lbry   <<< ExcavatorNvidia2
-    #"lyra2rev2" = @() #Lyra2RE2   <<< ExcavatorNvidia2
+    "blake2s" = @() #Blake2s   <<< ExcavatorNvidia2
+    "decred" = @() #Decred   <<< ExcavatorNvidia2
+    "daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
+    "equihash" = @() #Equihash   <<<>>> DSTM / CRASH
+    "lbry" = @() #Lbry   <<< ExcavatorNvidia2
+    "lyra2rev2" = @() #Lyra2RE2   <<< ExcavatorNvidia2
     "neoscrypt" = @() #NeoScrypt
     #"nist5" = @() #nist5   <<< ExcavatorNvidia2
-    #"pascal" = @() #Pascal   <<< ExcavatorNvidia2
+    "pascal" = @() #Pascal   <<< ExcavatorNvidia2
+    
+    # MPM forgot these
+    #"sia" = @() #sia
+    #"daggerhashimoto_decred" = @()
+    #"daggerhashimoto_sia" = @()
+    "daggerhashimoto_pascal" = @()
+    "cryptonight" = @() #CryptoNight
+    "keccak" = @() #Keccak
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName

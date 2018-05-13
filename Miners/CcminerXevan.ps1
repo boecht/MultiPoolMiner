@@ -1,42 +1,42 @@
 ﻿using module ..\Include.psm1
 
-$Path = ".\Bin\Polytimos-NVIDIA\ccminer.exe"
-$HashSHA256 = "3B9F6A607F0E66974FFB1880B1E89062AC7D0794BE6CC596493CC475EE36DA6F"
-$URI = "https://github.com/punxsutawneyphil/ccminer/releases/download/polytimosv2/ccminer-polytimos_v2.zip"
+$Path = ".\Bin\Xevan-NVIDIA\ccminer_x86.exe"
+$HashSHA256 = "E71488C61263C080964596B72880F04AC20E91A00CB6A217BCE7863685705243"
+$Uri = "https://github.com/nemosminer/ccminer-xevan/releases/download/ccminer-xevan/ccminer_x86.7z"
 
 $Commands = [PSCustomObject]@{
-    "hsr"       = "" #HSR
     "keccak"    = "" #Keccak
     "lyra2v2"   = "" #Lyra2RE2
-    "poly"      = "" #Polytimos
     "skein"     = "" #Skein
-
+    "xevan"     = "" #Xevan
+    
     # ASIC - never profitable 12/05/2018
-    #"blake2s"   = "" #Blake2s
     #"blakecoin" = "" #Blakecoin
+    #"blake2s"   = "" #Blake2s
     #"decred"   = "" #Decred
     #"lbry"     = "" #Lbry
     #"myr-gr"   = "" #MyriadGroestl
     #"nist5"    = "" #Nist5
-    #"qubit"    = "" #qubit
+    #"qubit"    = "" #Qubit
     #"quark"    = "" #Quark
+    #"sia"      = "" #sia
+    #"sib"      = "" #Sib
+    #"x11"      = "" #X11
+    #"x12"      = "" #X12
+    #"x13"      = "" #X13
     #"x14"      = "" #X14
+    #"x15"      = "" #X15
     
     # MPM forgot these
-    #"blake"     = "" #Blake256-14rounds(SFR)
+    #"blake"     = "" #Blakecoin
     "vcash"     = "" #Blake256-8rounds (XVC)
-    "lyra2"     = "" #(LyraBar)
-    "skein2"    = "" #Double Skein (Woodcoin)
-    #"x11"       = "" #X11 (DarkCoin)
-    "c11"       = "" #C11 (Chaincoin)
-    "x11evo"    = "" #Permuted x11 (Revolver)
-    #"x13"       = "" #X13 (MaruCoin)
-    #"x15"       = "" #X15 (Joincoin)
-    "x17"       = "" #X17 (XVG)
-    "whirlpool" = "" #whirlpool (JoinCoin)
-    "neoscrypt" = "" #Neoscrypt (FTC/PXC/UFO)
-    #"sia"       = "" #Sia (SIAcoin)
-    "veltor"    = "" #Thor's Riddle(?) (Veltor)
+    "lyra2"     = "" #Lyra2RE
+    "skein2"    = "" #Skein2
+    "c11"       = "" #C11
+    "x11evo"    = "" #X11evo
+    "whirlpool" = "" #whirlpool
+    "neoscrypt" = "" #NeoScrypt
+    "veltor"    = "" #Veltor
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
