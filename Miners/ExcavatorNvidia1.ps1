@@ -10,10 +10,10 @@ $Commands = [PSCustomObject]@{
     "blake2s" = @() #Blake2s   <<< ExcavatorNvidia2
     "decred" = @() #Decred   <<< ExcavatorNvidia2
     "daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
-    #"equihash" = @() #Equihash   --- BROKEN
+    "equihash" = @() #Equihash   --- BROKEN
     "lbry" = @() #Lbry   <<< ExcavatorNvidia2
     "lyra2rev2" = @() #Lyra2RE2   <<< ExcavatorNvidia2
-    #"neoscrypt" = @() #NeoScrypt   --- BROKEN
+    "neoscrypt" = @() #NeoScrypt   --- BROKEN
     #"nist5" = @() #nist5   <<< ExcavatorNvidia2
     "pascal" = @() #Pascal   <<< ExcavatorNvidia2
     
