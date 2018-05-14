@@ -34,7 +34,7 @@ $Commands = [PSCustomObject]@{
     #"x15"       = "" #X15 (Joincoin)
     "x17"       = "" #X17 (XVG)
     "whirlpool" = "" #whirlpool (JoinCoin)
-    #"neoscrypt" = "" #Neoscrypt (FTC/PXC/UFO)   --- BROKEN
+    "neoscrypt" = "" #Neoscrypt (FTC/PXC/UFO)   --- BROKEN
     #"sia"       = "" #Sia (SIAcoin)
     "veltor"    = "" #Thor's Riddle(?) (Veltor)
 }
