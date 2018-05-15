@@ -28,13 +28,13 @@ $Commands = [PSCustomObject]@{
     "lyra2"     = "" #(LyraBar)
     "skein2"    = "" #Double Skein (Woodcoin)
     #"x11"       = "" #X11 (DarkCoin)
-    "c11"       = "" #C11 (Chaincoin)
-    "x11evo"    = "" #Permuted x11 (Revolver)
+    #"c11"       = "" #C11 (Chaincoin)   --- BROKEN
+    #"x11evo"    = "" #Permuted x11 (Revolver)   --- BROKEN
     #"x13"       = "" #X13 (MaruCoin)
     #"x15"       = "" #X15 (Joincoin)
-    "x17"       = "" #X17 (XVG)
+    #"x17"       = "" #X17 (XVG)   --- BROKEN
     "whirlpool" = "" #whirlpool (JoinCoin)
-    "neoscrypt" = "" #Neoscrypt (FTC/PXC/UFO)   --- BROKEN
+    #"neoscrypt" = "" #Neoscrypt (FTC/PXC/UFO)   --- BROKEN
     #"sia"       = "" #Sia (SIAcoin)
     "veltor"    = "" #Thor's Riddle(?) (Veltor)
 }
