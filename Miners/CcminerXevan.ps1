@@ -32,10 +32,10 @@ $Commands = [PSCustomObject]@{
     "vcash"     = "" #Blake256-8rounds (XVC)
     "lyra2"     = "" #Lyra2RE
     "skein2"    = "" #Skein2
-    "c11"       = "" #C11
-    "x11evo"    = "" #X11evo
+    #"c11"       = "" #C11   --- BROKEN
+    #"x11evo"    = "" #X11evo   --- BROKEN
     "whirlpool" = "" #whirlpool
-    "neoscrypt" = "" #NeoScrypt
+    #"neoscrypt" = "" #NeoScrypt   --- BROKEN
     "veltor"    = "" #Veltor
 }
 
