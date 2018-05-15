@@ -6,18 +6,18 @@ $Uri = "https://github.com/nemosminer/ccminer-hcash/releases/download/alexishsr/
 
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
-    "c11" = "" #c11
+    #"c11" = "" #c11   --- BROKEN
     "hsr" = "" #HSR, HShare
     "keccak" = "" #Keccak
     "lyra2" = "" #Lyra2
     "lyra2v2" = "" #lyra2v2
-    "neoscrypt" = "" #NeoScrypt
+    #"neoscrypt" = "" #NeoScrypt   --- BROKEN
     "skein" = "" #Skein
     "skein2" = "" #skein2
     "veltor" = "" #Veltor
     #"whirlpool" = "" #Whirlpool
-    "x11evo" = "" #X11evo
-    "x17" = "" #x17
+    #"x11evo" = "" #X11evo   --- BROKEN
+    #"x17" = "" #x17   --- BROKEN
 
     # ASIC - never profitable 20/04/2018
     #"blake2s" = "" #Blake2s
