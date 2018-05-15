@@ -38,7 +38,9 @@
   "MinerName": "$MinerName",
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": "$ExcludeAlgorithm",
-  "ExcludeMinerName": "$ExcludeMinerName",
+  "ExcludeMinerName": [
+    "PalginNvidia"
+  ],
   "ExcludePoolName": [
     "MiningPoolHubCoins",
     "YiiMP",
