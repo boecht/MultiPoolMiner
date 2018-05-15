@@ -13,7 +13,7 @@ $Commands = [PSCustomObject]@{
     "equihash" = @() #Equihash   BROKEN
     "lbry" = @() #Lbry
     "lyra2rev2" = @() #Lyra2RE2
-    "neoscrypt" = @() #NeoScrypt   BROKEN
+    #"neoscrypt" = @() #NeoScrypt   --- BROKEN
     #"nist5" = @() #nist5 is ASIC territory
     "pascal" = @() #Pascal
     
