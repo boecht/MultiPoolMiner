@@ -12,7 +12,6 @@ Param(
     [Switch]$SkipAMD = $false,
     [Parameter(Mandatory = $false)]
     [Switch]$SkipNVIDIA = $false
-
 )
 
 # Make sure we are in the script's directory
@@ -38,6 +37,7 @@ $StatSpan = New-TimeSpan $StatStart $StatEnd
 $Stats = [PSCustomObject]@{}
 if (Test-Path "Stats") {Get-ChildItemContent "Stats" | ForEach-Object {$Stats | Add-Member $_.Name $_.Content}}
 
+# Add info flag to $Config; required for proper miner enumeration
 $Config = [PSCustomObject]@{
     Pools = [PSCustomObject]@{}
     Miners = [PSCustomObject]@{}
@@ -57,6 +57,7 @@ $Config = [PSCustomObject]@{
     Delay = 0
     Watchdog = $True
     SwitchingPrevention = 1
+    InfoOnly = $true
 }
 
 # Generate fake pools for each algorithm
