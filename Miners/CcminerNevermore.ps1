@@ -27,7 +27,7 @@ $Commands = [PSCustomObject]@{
     "x11evo" = "" #X11evo
     "x12" = "" #X12 - NOT TESTED
     "x16r" = "" #Raven
-    "x16s" = "" #Pigeon   <<< ccminerZealot
+    #"x16s" = "" #Pigeon   <<< CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerZealot
     "x17" = "" #X17
    
     # ASIC - never profitable 11/05/2018
