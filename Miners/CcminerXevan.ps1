@@ -6,7 +6,7 @@ $Uri = "https://github.com/nemosminer/ccminer-xevan/releases/download/ccminer-xe
 
 $Commands = [PSCustomObject]@{
     "keccak"    = "" #Keccak
-    "lyra2v2"   = "" #Lyra2RE2
+    #"lyra2v2"   = "" #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
     "skein"     = "" #Skein
     "xevan"     = "" #Xevan
     
