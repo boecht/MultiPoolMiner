@@ -22,7 +22,7 @@ $Commands = [PSCustomObject]@{
     "tribus"    = "" #Tribus
     "x11evo"    = "" #X11evo
     "x16r"      = "" #Raven
-    "x16s"      = "" #Pigeon
+    #"x16s"      = "" #Pigeon   <<< CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerZealot
     "x17"       = "" #X17
     
     # ASIC - never profitable 12/05/2018
