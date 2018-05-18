@@ -9,8 +9,8 @@ $Commands = [PSCustomObject]@{
     #Intensities and parameters tested by nemosminer on 10603gb to 1080ti
     "c11"        = " -i 21" #X11evo; fix for default intensity   --- BROKEN
     "hsr"        = "" #HSR, HShare
-    "keccak"     = " -m 2 -i 29" #Keccak; fix for default intensity, difficulty x M
-    "keccakc"    = " -i 29" #Keccakc; fix for default intensity
+    #"keccak"     = " -m 2 -i 29" #Keccak; fix for default intensity, difficulty x M   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
+    "keccakc"    = " -i 29" #Keccakc; fix for default intensity   <<< CcminerNevermore < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerCornzKeccakC < CcminerAlexis
     #"lyra2"      = "" #Lyra2   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
     #"lyra2v2"    = "" #lyra2v2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
     "neoscrypt"  = " -i 15.5" #NeoScrypt; fix for default intensity   --- BROKEN
