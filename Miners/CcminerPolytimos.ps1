@@ -25,7 +25,7 @@ $Commands = [PSCustomObject]@{
     # MPM forgot these
     #"blake"     = "" #Blake256-14rounds(SFR)
     "vcash"     = "" #Blake256-8rounds (XVC)
-    "lyra2"     = "" #(LyraBar)
+    #"lyra2"     = "" #(LyraBar)   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
     "skein2"    = "" #Double Skein (Woodcoin)
     #"x11"       = "" #X11 (DarkCoin)
     #"c11"       = "" #C11 (Chaincoin)   --- BROKEN
