@@ -14,7 +14,7 @@ $Commands = [PSCustomObject]@{
     "skein"      = "" #Skein
     "skunk"      = "" #Skunk
     #"timetravel" = "" #Timetravel   <<< CcminerTpruvot < CcminerAllium < CcminerNanashi < CcminerSkunk < CcminerSuprMiner < CcminerNevermore
-    "tribus"     = "" #Tribus
+    #"tribus"     = "" #Tribus   <<< CcminerSkunk < CcminerNanashi < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerSuprMiner
     "x11evo"     = "" #X11evo
     "x17"        = "" #X17
     
