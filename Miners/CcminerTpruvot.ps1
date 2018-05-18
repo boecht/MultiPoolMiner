@@ -15,7 +15,7 @@ $Commands = [PSCustomObject]@{
     "equihash"        = "" #Equihash - Beaten by Bminer by 30%   <<< DSTM
     "fresh"           = "" #fresh
     "fugue256"        = "" #Fugue256
-    "groestl"         = "" #Groestl
+    #"groestl"         = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     #"hmq1725"        = "" #HMQ1725   <<< CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerSuprMiner < CcminerNevermore
     "jackpot"         = "" #JackPot
     "keccak"          = "" #Keccak
@@ -69,7 +69,7 @@ $Commands = [PSCustomObject]@{
     
     # MPM forgot these
     "cryptolight"     = "" #AEON cryptonight (MEM/2)
-    "cryptonight"     = "" #XMR cryptonight, Bytecoin, Dash, DigitalNote, etc
+    #"cryptonight"     = "" #XMR cryptonight, Bytecoin, Dash, DigitalNote, etc   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
     "hsr"             = "" #Hshare
     #"sia"            = "" #SIA
     "whirlcoin"       = "" #Old Whirlcoin (Whirlpool algo)
