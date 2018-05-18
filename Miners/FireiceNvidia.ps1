@@ -10,7 +10,7 @@ $Port = 3335
 $Commands = [PSCustomObject]@{
     #"cryptonight" = "" #CryptoNight is ASIC territory
     "cryptonight_lite" = "" # CryptoNight-Lite
-    "cryptonightV7" = "" #CryptoNightV7
+    #"cryptonightV7" = "" #CryptoNightV7   --- BROKEN   <<< FireiceNvidia < XmrigNvidia < CcminerAllium
 }
 
 $Commands | Get-Member -MemberType NoteProperty | Select-Object -ExpandProperty Name | ForEach-Object {
