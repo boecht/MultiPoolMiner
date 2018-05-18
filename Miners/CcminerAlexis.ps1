@@ -7,7 +7,7 @@ $Uri = "https://github.com/nemosminer/ccminerAlexis78/releases/download/Alexis78
 $Commands = [PSCustomObject]@{
     #GPU - profitable 16/05/2018
     #Intensities and parameters tested by nemosminer on 10603gb to 1080ti
-    "c11"        = " -i 21" #X11evo; fix for default intensity   --- BROKEN
+    "c11"        = " -i 21" #X11evo; fix for default intensity   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
     "hsr"        = "" #HSR, HShare
     #"keccak"     = " -m 2 -i 29" #Keccak; fix for default intensity, difficulty x M   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
     "keccakc"    = " -i 29" #Keccakc; fix for default intensity   <<< CcminerNevermore < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerCornzKeccakC < CcminerAlexis
