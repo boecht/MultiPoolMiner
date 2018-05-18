@@ -7,7 +7,7 @@ $Uri = "https://github.com/sp-hash/ccminer/releases/download/1.5.81/release81.7z
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
     "bastion" = "" #bastion
-    "c11" = "" #C11
+    #"c11" = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
     "credit" = "" #Credit
     "deep" = "" #deep
     "dmd-gr" = "" #dmd-gr
