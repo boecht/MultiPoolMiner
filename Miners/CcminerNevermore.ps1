@@ -62,7 +62,7 @@ $Commands = [PSCustomObject]@{
     "fugue256"        = "" #Fuguecoin
     "jackpot"         = "" #JHA v8
     "luffa"           = "" #Joincoin
-    "lyra2"           = "" #CryptoCoin
+    #"lyra2"           = "" #CryptoCoin   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
     "penta"           = "" #Pentablake hash (5x Blake 512)
     "polytimos"       = "" #Politimos
     #"sha256t"         = "" #SHA256 x3 (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
