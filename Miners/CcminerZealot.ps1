@@ -7,7 +7,7 @@ $MinerFeeInPercent = 1
 
 $Commands = [PSCustomObject]@{
     "bitcore" = "" #Bitcore
-    "phi"     = "" #PHI   <<< CcminerAnxmodPhi
+    "phi"     = "" #PHI   <<< CcminerAnxmodPhi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerZealot
     "x16r"    = "" #Raven
     "x16s"    = "" #Pigeon   <<< CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerZealot
     "x17"     = "" #X17
