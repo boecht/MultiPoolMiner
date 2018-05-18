@@ -58,8 +58,8 @@ $Commands = [PSCustomObject]@{
     #"scrypt"      = "" #Scrypt coins (Litecoin, Dogecoin, etc)
     #"scrypt:N"    = "" #Scrypt-N (:10 for 2048 iterations)
     "scrypt-jane" = "" #Chacha coins like Cache and Ultracoin
-    "s3"          = "" #1coin (ONE)
-    "sha256t"     = "" #OneCoin (OC)
+    #"s3"          = "" #1coin (ONE) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
+    #"sha256t"     = "" #OneCoin (OC) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     #"sia"         = "" #SIA
     "skein2"      = "" #Woodcoin
     #"x15"         = "" #Halcyon
