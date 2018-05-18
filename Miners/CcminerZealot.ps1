@@ -11,7 +11,7 @@ $Commands = [PSCustomObject]@{
     "x16r"    = "" #Raven
     "x16s"    = "" #Pigeon   <<< CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerZealot
     "x17"     = "" #X17
-    "xevan"   = "" #Xevan, new in 1.09a
+    "xevan"   = "" #Xevan, new in 1.09a   <<< CcminerXevan < CcminerZealot
     "vit"     = "" #Vitality, new in 1.09a
 }
 
