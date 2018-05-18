@@ -10,7 +10,7 @@ $Commands = [PSCustomObject]@{
     "daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
     "equihash" = @() #Equihash   BROKEN
     #"lyra2rev2" = @() #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
-    "neoscrypt" = @() #NeoScrypt   --- BROKEN
+    #"neoscrypt" = @() #NeoScrypt   --- BROKEN
     "pascal" = @() #Pascal   <<< ExcavatorNvidia1 < ExcavatorNvidia2
     
     # ASIC - never profitable 20/04/2018
