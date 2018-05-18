@@ -6,7 +6,7 @@ $Uri = "https://github.com/nemosminer/ccminerx16r-x16s/releases/download/v0.5/cc
 
 $Commands = [PSCustomObject]@{
     "bitcore"         = "" #Bitcore
-    "c11"             = "" #C11
+    #"c11"             = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
     "equihash"        = "" #Equihash - Beaten by Bminer by 30%
     #"groestl"        = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     "hmq1725"         = "" #HMQ1725   <<< CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerSuprMiner < CcminerNevermore
