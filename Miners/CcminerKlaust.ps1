@@ -6,7 +6,7 @@ $Uri = "https://github.com/KlausT/ccminer/releases/download/8.21/ccminer-821-cud
 
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
-    "c11" = "" #C11
+    #"c11" = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
     "deep" = "" #deep
     "dmd-gr" = "" #dmd-gr
     "fresh" = "" #fresh
