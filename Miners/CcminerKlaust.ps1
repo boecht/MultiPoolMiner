@@ -19,7 +19,7 @@ $Commands = [PSCustomObject]@{
     "neoscrypt" = "" #NeoScrypt   <<< CcminerNanashi <<< PalginNvidia <<< ExcavatorNvidia1
     "penta" = "" #Pentablake
     "skein" = "" #Skein
-    "s3" = "" #S3   <<< no profit (sha256t)
+    #"s3" = "" #S3 (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     "whirlpool" = "whirl" #Whirlpool
     "whirlpoolx" = "" #whirlpoolx
     "X17" = "" #X17 Verge   <<< CcminerSp <<< CcminerNanashi
