@@ -5,7 +5,6 @@ $HashSHA256 = "940EB4C246019216C8F95FFB2F2E65FA147B13A65756A38D660146672E47844B"
 $Uri = "https://github.com/nemosminer/ccminerx16r-x16s/releases/download/v0.5/ccminerx16rx16s64-bit.7z"
 
 $Commands = [PSCustomObject]@{
-<<<<<<< HEAD
     "bitcore"         = "" #Bitcore
     "c11"             = "" #C11
     "equihash"        = "" #Equihash - Beaten by Bminer by 30%
