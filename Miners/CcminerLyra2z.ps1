@@ -11,8 +11,8 @@ $Commands = [PSCustomObject]@{
     "lyra2h"          = "" #Lyra2h
     #"lyra2v2"        = "" #Lyra2RE2   <<< CcminerPolytimos > ExcavatorNvidia2 > CcminerCornzKeccakC > ExcavatorNvidia1 > CcminerXevan > CcminerAnxmodPhi > CcminerAlexis > CcminerNanashi > CcminerLyra2RE2 > CcminerSkunk > CcminerTpruvot > CcminerAllium > CcminerSuprMiner > CcminerNevermore > CcminerSib > CcminerKlaust > CcminerSp > CcminerLyra2z
     #"lyra2z"          = "" #Lyra2z   <<< CcminerSkunk < CcminerNevermore < CcminerLyra2z < CcminerNanashi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium
-    "neoscrypt"       = "" #NeoScrypt
-    "skein"           = "" #Skein
+    #"neoscrypt"       = "" #NeoScrypt   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
+    #"skein"           = "" #Skein   <<< CcminerNevermore < CcminerLyra2RE2 < CcminerAllium < CcminerSuprMiner < CcminerSkunk < CcminerLyra2z < CcminerNanashi < CcminerSib < CcminerAlexis < CcminerKlaust < CcminerSp
     "x11evo"          = "" #X11evo
     "x17"             = "" #X17
     
