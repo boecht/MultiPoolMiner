@@ -39,6 +39,8 @@
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": "$ExcludeAlgorithm",
   "ExcludeMinerName": [
+    "JustAMinerNeoScrypt",
+    "NsgminerNvidia",
     "PalginNvidia"
   ],
   "ExcludePoolName": [
