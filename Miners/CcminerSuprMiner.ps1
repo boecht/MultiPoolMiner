@@ -6,7 +6,7 @@ $Uri = "https://github.com/ocminer/suprminer/releases/download/1.5/suprminer-1.5
 
 $Commands = [PSCustomObject]@{
     "bitcore"     = "" #Bitcore
-    "c11"         = "" #C11
+    #"c11"         = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
     #"groestl"    = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     #"hmq1725"    = "" #HMQ1725   <<< CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerSuprMiner < CcminerNevermore
     "hsr"         = "" #HSR
