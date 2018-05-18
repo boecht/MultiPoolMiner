@@ -6,7 +6,7 @@ $Uri = "https://github.com/MultiPoolMiner/miner-binaries/releases/download/zenem
 $MinerFeeInPercent = 1
 
 $Commands = [PSCustomObject]@{
-    "bitcore" = "" #Bitcore
+    "bitcore" = "" #Bitcore   <<< CcminerSuprMiner < CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerZealot
     "phi"     = "" #PHI   <<< CcminerAnxmodPhi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerZealot
     "x16r"    = "" #Raven
     "x16s"    = "" #Pigeon   <<< CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerZealot
