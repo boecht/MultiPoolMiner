@@ -9,7 +9,7 @@ $Commands = [PSCustomObject]@{
     
     # MPM forgot these
     "bastion" = "" #Hefty bastion
-    "bitcore" = "" #Timetravel-10
+    #"bitcore" = "" #Timetravel-10   <<< CcminerSuprMiner < CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerZealot
     #"blake" = "" #Blake 256 (SFR)
     #"blake2s" = "" #Blake2-S 256 (NEVA)
     #"blakecoin" = "" #Fast Blake 256 (8 rounds)
@@ -37,7 +37,7 @@ $Commands = [PSCustomObject]@{
     "lyra2z" = "" #ZeroCoin (3rd impl)   <<< CcminerSkunk < CcminerNevermore < CcminerLyra2z < CcminerNanashi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium
     #"myr-gr" = "" #Myriad-Groestl
     "monero" = "" #XMR cryptonight (v7)
-    "neoscrypt" = "" #FeatherCoin, Phoenix, UFO...
+    #"neoscrypt" = "" #FeatherCoin, Phoenix, UFO...   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
     #"nist5" = "" #NIST5 (TalkCoin)
     "penta" = "" #Pentablake hash (5x Blake 512)
     #"phi" = "" #BHCoin   <<< CcminerAnxmodPhi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerZealot
@@ -51,7 +51,7 @@ $Commands = [PSCustomObject]@{
     #"scrypt" = "" #Scrypt
     "scrypt-jane" = "" #Scrypt-jane Chacha
     #"scrypt:N" = "" #use to mine Scrypt-N (:10 for 2048 iterations)
-    "skein" = "" #Skein SHA2 (Skeincoin)
+    #"skein" = "" #Skein SHA2 (Skeincoin)   <<< CcminerNevermore < CcminerLyra2RE2 < CcminerAllium < CcminerSuprMiner < CcminerSkunk < CcminerLyra2z < CcminerNanashi < CcminerSib < CcminerAlexis < CcminerKlaust < CcminerSp
     "skein2" = "" #Double Skein (Woodcoin)
     "skunk" = "" #Skein Cube Fugue Streebog
     "stellite" = "" #Cryptonight v3
