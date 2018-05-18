@@ -5,7 +5,7 @@ $HashSHA256 = "6C3AFFABBD39566F4AE3B78CF55BFEA06BE98C1D48FDDB27DEE406DB87B7663F"
 $URI = "https://github.com/216k155/ccminer-phi-anxmod/releases/download/ccminer%2Fphi-1.0/ccminer-phi-1.0.zip"
 
 $Commands = [PSCustomObject]@{
-    "Phi" = "" #Phi Phi1612 LUX
+    #"Phi" = "" #Phi Phi1612 LUX   <<< CcminerAnxmodPhi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerZealot
     
     # MPM forgot these
     #"blake" = "" #Blake256-14rounds(SFR)
