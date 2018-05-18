@@ -7,22 +7,24 @@ $HashSHA256 = "4CC2FF8C07F17E940A1965B8D0F7DD8508096A4E4928704912FA96C442346642"
 $Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.4a/excavator_v1.4.4a_NVIDIA_Win64.zip"
 
 $Commands = [PSCustomObject]@{
-    "blake2s" = @() #Blake2s   <<< ExcavatorNvidia2
-    "decred" = @() #Decred   <<< ExcavatorNvidia2
     "daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
     "equihash" = @() #Equihash   --- BROKEN
-    "lbry" = @() #Lbry   <<< ExcavatorNvidia2
     #"lyra2rev2" = @() #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
     "neoscrypt" = @() #NeoScrypt   --- BROKEN
-    #"nist5" = @() #nist5   <<< ExcavatorNvidia2
-    "pascal" = @() #Pascal   <<< ExcavatorNvidia2
+    #"pascal" = @() #Pascal   <<< ExcavatorNvidia1 < ExcavatorNvidia2
+    
+    # ASIC - never profitable 20/04/2018
+    #"blake2s"        = "" #Blake2s
+    #"lbry"           = "" #Lbry
+    #"decred"         = "" #Decred
+    #"nist5"          = "" #Nist5
+    #"sia"            = "" #Sia
     
     # MPM forgot these
-    #"sia" = @() #sia
     #"daggerhashimoto_decred" = @()
     #"daggerhashimoto_sia" = @()
     "daggerhashimoto_pascal" = @()
-    "cryptonight" = @() #CryptoNight
+    #"cryptonight" = @() #CryptoNight   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
     "keccak" = @() #Keccak
 }
 
