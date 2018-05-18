@@ -15,18 +15,18 @@ $Commands = [PSCustomObject]@{
     "equihash"        = "" #Equihash - Beaten by Bminer by 30%   <<< DSTM
     "fresh"           = "" #fresh
     "fugue256"        = "" #Fugue256
-    #"groestl"         = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
+    #"groestl"        = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     #"hmq1725"        = "" #HMQ1725   <<< CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerSuprMiner < CcminerNevermore
     "jackpot"         = "" #JackPot
     "keccak"          = "" #Keccak
     "keccakc"         = "" #keccakc
     "luffa"           = "" #Luffa
-    #"lyra2"           = "" #lyra2re   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
+    #"lyra2"          = "" #lyra2re   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
     #"lyra2v2"        = "" #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
-    #"lyra2z"          = "" #Lyra2z, ZCoin   <<< CcminerSkunk < CcminerNevermore < CcminerLyra2z < CcminerNanashi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium
+    #"lyra2z"         = "" #Lyra2z, ZCoin   <<< CcminerSkunk < CcminerNevermore < CcminerLyra2z < CcminerNanashi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium
     "neoscrypt"       = "" #NeoScrypt
     "penta"           = "" #Pentablake
-    "phi"             = "" #PHI   <<< CcminerAnxmodPhi
+    #"phi"            = "" #PHI   <<< CcminerAnxmodPhi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerZealot
     "polytimos"       = "" #Polytimos
     "scryptjane:nf"   = "" #scryptjane:nf
     #"sha256t"        = "" #sha256t (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
@@ -69,7 +69,7 @@ $Commands = [PSCustomObject]@{
     
     # MPM forgot these
     "cryptolight"     = "" #AEON cryptonight (MEM/2)
-    #"cryptonight"     = "" #XMR cryptonight, Bytecoin, Dash, DigitalNote, etc   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
+    #"cryptonight"    = "" #XMR cryptonight, Bytecoin, Dash, DigitalNote, etc   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
     "hsr"             = "" #Hshare
     #"sia"            = "" #SIA
     "whirlcoin"       = "" #Old Whirlcoin (Whirlpool algo)
