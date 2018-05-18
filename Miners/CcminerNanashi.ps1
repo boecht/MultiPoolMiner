@@ -27,11 +27,11 @@ $Commands = [PSCustomObject]@{
     "mjollnir"        = "" #Mjollnir
     "neoscrypt"       = "" #NeoScrypt   <<< PalginNvidia <<< ExcavatorNvidia1
     "penta"           = "" #Pentablake
-    "sha256t"         = "" #sha256t   <<< no profit
+    #"sha256t"         = "" #sha256t (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     "skein"           = "" #Skein
     "skein2"          = "" #skein2
     "skunk"           = "" #Skunk
-    "s3"              = "" #S3   <<< no profit (sha256t)
+    #"s3"              = "" #S3 (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     #"timetravel"      = "" #Timetravel   <<< CcminerTpruvot < CcminerAllium < CcminerNanashi < CcminerSkunk < CcminerSuprMiner < CcminerNevermore
     #"tribus"          = "" #Tribus   <<< CcminerSkunk < CcminerNanashi < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerSuprMiner
     "veltor"          = "" #Veltor
