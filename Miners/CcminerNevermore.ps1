@@ -65,10 +65,10 @@ $Commands = [PSCustomObject]@{
     "lyra2"           = "" #CryptoCoin
     "penta"           = "" #Pentablake hash (5x Blake 512)
     "polytimos"       = "" #Politimos
-    "sha256t"         = "" #SHA256 x3
+    #"sha256t"         = "" #SHA256 x3 (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     "scrypt-jane"     = "" #Scrypt-jane Chacha
     "skein2"          = "" #Double Skein (Woodcoin)
-    "s3"              = "" #S3 (1Coin)
+    #"s3"              = "" #S3 (1Coin) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     "whirlcoin"       = "" #Old Whirlcoin (Whirlpool algo)
     "whirlpool"       = "" #Whirlpool algo
     "wildkeccak"      = "" #Boolberry
