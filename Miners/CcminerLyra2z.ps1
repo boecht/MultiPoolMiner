@@ -48,7 +48,7 @@ $Commands = [PSCustomObject]@{
     #"scrypt"         = "" #Scrypt
     "scrypt-jane"     = "" #Scrypt-jane Chacha
     "skein2"          = "" #Double Skein (Woodcoin)
-    "s3"              = "" #S3 (1Coin)
+    #"s3"              = "" #S3 (1Coin) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     #"vanilla"        = "" #Blake256-8 (VNL)
     "veltor"          = "" #Thorsriddle streebog
     "whirlcoin"       = "" #Old Whirlcoin (Whirlpool algo)
