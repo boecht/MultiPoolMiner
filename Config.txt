@@ -41,7 +41,8 @@
   "ExcludeMinerName": [
     "JustAMinerNeoScrypt",
     "NsgminerNvidia",
-    "PalginNvidia"
+    "PalginNvidia",
+    "XmrigNvidia"
   ],
   "ExcludePoolName": [
     "MiningPoolHubCoins",
