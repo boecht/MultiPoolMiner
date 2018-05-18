@@ -6,7 +6,7 @@ $Uri = "https://github.com/nicehash/ccminer-nanashi/releases/download/1.7.6-r6/c
 
 $Commands = [PSCustomObject]@{
     "c11"       = "" #C11
-    "groestl"   = "" #Groestl
+    #"groestl"   = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     "keccak"    = "" #Keccak
     #"lyra2v2"   = "" #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
     "neoscrypt" = "" #NeoScrypt
