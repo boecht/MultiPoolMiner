@@ -5,7 +5,7 @@ $HashSHA256 = "A63C6AC68D814CEC3757B345FE608DD44B59EECED6A7B4B47F5B408D0BC84CD3"
 $URI = "https://github.com/cornz/ccminer/releases/download/keccakc/ccminer_CP.zip"
 
 $Commands = [PSCustomObject]@{
-    "keccakC" = "" #KeccakC
+    "keccakC" = " -i 29" #KeccakC   <<< CcminerNevermore < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerCornzKeccakC < CcminerAlexis
     
     # MPM forgot these
     #"blake"     = "" #Blake256-14rounds(SFR)
@@ -13,7 +13,7 @@ $Commands = [PSCustomObject]@{
     #"blakecoin" = "" #Blake256-8rounds (BLC)
     "vcash"     = "" #Blake256-8rounds (XVC)
     #"blake2s"   = "" #Blake2s (NEVA/XVG)
-    "keccak"    = "" #keccak256 (Maxcoin)
+    #"keccak"    = "" #keccak256 (Maxcoin)   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
     #"lyra2"     = "" #(LyraBar)   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
     #"lyra2v2"   = "" #(VertCoin)   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
     "skein"     = "" #Skein SHA2 (AUR/DGB/SKC)
