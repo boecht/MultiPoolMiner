@@ -15,8 +15,8 @@ $Commands = [PSCustomObject]@{
     "skunk"       = "" #Skunk
     #"timetravel" = "" #Timetravel   <<< CcminerTpruvot < CcminerAllium < CcminerNanashi < CcminerSkunk < CcminerSuprMiner < CcminerNevermore
     #"tribus"     = "" #Tribus   <<< CcminerSkunk < CcminerNanashi < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerSuprMiner
-    "x11evo"      = "" #X11evo
-    "x17"         = "" #X17
+    #"x11evo"      = "" #X11evo   <<< CcminerNanashi < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerLyra2z < CcminerNevermore < CcminerSib < CcminerAlexis
+    #"x17"         = "" #X17  <<< CcminerKlaust < CcminerLyra2RE2 < CcminerLyra2z < CcminerNanashi < CcminerSp < CcminerSuprMiner < CcminerSkunk < CcminerAllium < CcminerNevermore < CcminerAlexis < CcminerZealot
     
     # ASIC - never profitable 12/05/2018
     #"blake2s"    = "" #Blake2s
@@ -40,7 +40,7 @@ $Commands = [PSCustomObject]@{
     "cryptolight" = "" #AEON cryptonight (MEM/2)
     #"cryptonight" = "" #XMR cryptonight   --- BROKEN
     "deep"        = "" #Deepcoin
-    "equihash"    = "" #Zcash Equihash
+    #"equihash"    = "" #Zcash Equihash   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
     "dmd-gr"      = "" #Diamond-Groestl
     "fresh"       = "" #Freshcoin (shavite 80)
     "fugue256"    = "" #Fuguecoin
