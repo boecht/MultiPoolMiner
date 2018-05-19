@@ -8,7 +8,7 @@ $Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.4a/excavato
 
 $Commands = [PSCustomObject]@{
     "daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
-    "equihash" = @() #Equihash   --- BROKEN
+    #"equihash" = @() #Equihash   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
     #"lyra2rev2" = @() #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
     "neoscrypt" = @() #NeoScrypt   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
     #"pascal" = @() #Pascal   <<< ExcavatorNvidia1 < ExcavatorNvidia2
