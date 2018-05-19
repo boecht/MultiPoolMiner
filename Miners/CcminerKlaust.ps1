@@ -22,7 +22,7 @@ $Commands = [PSCustomObject]@{
     #"s3" = "" #S3 (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     "whirlpool" = "whirl" #Whirlpool
     "whirlpoolx" = "" #whirlpoolx
-    "X17" = "" #X17 Verge   <<< CcminerSp <<< CcminerNanashi
+    #"X17" = "" #X17 Verge  <<< CcminerKlaust < CcminerLyra2RE2 < CcminerLyra2z < CcminerNanashi < CcminerSp < CcminerSuprMiner < CcminerSkunk < CcminerAllium < CcminerNevermore < CcminerAlexis < CcminerZealot
     
     # ASIC - never profitable 20/04/2018
     #"blake" = "" #blake
