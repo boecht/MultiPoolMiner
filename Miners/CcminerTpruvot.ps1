@@ -70,7 +70,7 @@ $Commands = [PSCustomObject]@{
     # MPM forgot these
     "cryptolight"     = "" #AEON cryptonight (MEM/2)
     #"cryptonight"    = "" #XMR cryptonight, Bytecoin, Dash, DigitalNote, etc   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
-    #"hsr"             = "" #HshareCcminerAlexis           X11evo                                  108,77 MH/s    1,063         85 %  0,471             0,009776 Zpool-1
+    #"hsr"             = "" #Hshare   <<< CcminerSuprMiner < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerAnxmodPhi < CcminerPolytimos < CcminerAlexis
     #"sia"            = "" #SIA
     "whirlcoin"       = "" #Old Whirlcoin (Whirlpool algo)
 }
