@@ -12,7 +12,7 @@ $Commands = [PSCustomObject]@{
     #"c11"             = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
     "deep"            = "" #deep
     "dmd-gr"          = "" #dmd-gr
-    "equihash"        = "" #Equihash   <<< Dstm
+    #"equihash"        = "" #Equihash   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
     "fresh"           = "" #fresh
     "fugue256"        = "" #Fugue256
     #"groestl"         = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
@@ -37,8 +37,8 @@ $Commands = [PSCustomObject]@{
     "veltor"          = "" #Veltor
     "whirlpool"       = "" #Whirlpool
     "wildkeccak"      = "" #wildkeccak
-    "x11evo"          = "" #X11evo
-    "x17"             = "" #x17   <<< CcminerZealot.ps1
+    #"x11evo"          = "" #X11evo   <<< CcminerNanashi < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerLyra2z < CcminerNevermore < CcminerSib < CcminerAlexis
+    #"x17"             = "" #x17  <<< CcminerKlaust < CcminerLyra2RE2 < CcminerLyra2z < CcminerNanashi < CcminerSp < CcminerSuprMiner < CcminerSkunk < CcminerAllium < CcminerNevermore < CcminerAlexis < CcminerZealot
     "zr5"             = "" #zr5
     
     # ASIC - never profitable 27/03/2018
