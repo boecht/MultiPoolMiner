@@ -12,7 +12,7 @@ $Commands = [PSCustomObject]@{
     #"c11"             = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
     "deep"            = "" #deep
     "dmd-gr"          = "" #dmd-gr
-    "equihash"        = "" #Equihash - Beaten by Bminer by 30%   <<< DSTM
+    #"equihash"        = "" #Equihash - Beaten by Bminer by 30%   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
     "fresh"           = "" #fresh
     "fugue256"        = "" #Fugue256
     #"groestl"        = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
@@ -40,7 +40,7 @@ $Commands = [PSCustomObject]@{
     #"whirlpool"      = "" #Whirlpool
     #"whirlpoolx"     = "" #whirlpoolx
     "wildkeccak"      = "" #wildkeccak
-    "x11evo"          = "" #X11evo
+    #"x11evo"          = "" #X11evo   <<< CcminerNanashi < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerLyra2z < CcminerNevermore < CcminerSib < CcminerAlexis
     "x16r"            = "" #X16r   <<< CcminerSuprMiner <<< CcminerNevermore
     #"X16s"           = "" #X16s
     #"x17"            = "" #x17
@@ -70,7 +70,7 @@ $Commands = [PSCustomObject]@{
     # MPM forgot these
     "cryptolight"     = "" #AEON cryptonight (MEM/2)
     #"cryptonight"    = "" #XMR cryptonight, Bytecoin, Dash, DigitalNote, etc   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
-    "hsr"             = "" #Hshare
+    #"hsr"             = "" #HshareCcminerAlexis           X11evo                                  108,77 MH/s    1,063         85 %  0,471             0,009776 Zpool-1
     #"sia"            = "" #SIA
     "whirlcoin"       = "" #Old Whirlcoin (Whirlpool algo)
 }
