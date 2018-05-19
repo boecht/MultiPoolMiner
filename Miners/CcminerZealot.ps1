@@ -10,7 +10,7 @@ $Commands = [PSCustomObject]@{
     "phi"     = "" #PHI   <<< CcminerAnxmodPhi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerZealot
     "x16r"    = "" #Raven
     "x16s"    = "" #Pigeon   <<< CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerZealot
-    "x17"     = "" #X17
+    "x17"     = "" #X17  <<< CcminerKlaust < CcminerLyra2RE2 < CcminerLyra2z < CcminerNanashi < CcminerSp < CcminerSuprMiner < CcminerSkunk < CcminerAllium < CcminerNevermore < CcminerAlexis < CcminerZealot
     "xevan"   = "" #Xevan, new in 1.09a   <<< CcminerXevan < CcminerZealot
     "vit"     = "" #Vitality, new in 1.09a
 }
