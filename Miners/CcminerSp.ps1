@@ -29,7 +29,7 @@ $Commands = [PSCustomObject]@{
     "spread" = "" #Spread
     "whirlpool" = "" #Whirlpool
     "whirlpoolx" = "" #whirlpoolx
-    "x17" = "" #x17
+    #"x17" = "" #x17  <<< CcminerKlaust < CcminerLyra2RE2 < CcminerLyra2z < CcminerNanashi < CcminerSp < CcminerSuprMiner < CcminerSkunk < CcminerAllium < CcminerNevermore < CcminerAlexis < CcminerZealot
     
     # ASIC - never profitable 27/03/2018
     #"blake" = "" #blake
