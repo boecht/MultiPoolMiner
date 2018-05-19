@@ -53,7 +53,7 @@ $Commands = [PSCustomObject]@{
     #"scrypt:N" = "" #use to mine Scrypt-N (:10 for 2048 iterations)
     #"skein" = "" #Skein SHA2 (Skeincoin)   <<< CcminerNevermore < CcminerLyra2RE2 < CcminerAllium < CcminerSuprMiner < CcminerSkunk < CcminerLyra2z < CcminerNanashi < CcminerSib < CcminerAlexis < CcminerKlaust < CcminerSp < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAnxmodPhi
     "skein2" = "" #Double Skein (Woodcoin)
-    "skunk" = "" #Skein Cube Fugue Streebog
+    #"skunk" = "" #Skein Cube Fugue Streebog   <<< CcminerAllium < CcminerNevermore < CcminerSuprMiner < CcminerNanashi < CcminerSkunk
     "stellite" = "" #Cryptonight v3
     "s3" = "" #S3 (1Coin) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     #"timetravel" = "" #Machinecoin permuted x8   <<< CcminerTpruvot < CcminerAllium < CcminerNanashi < CcminerSkunk < CcminerSuprMiner < CcminerNevermore
