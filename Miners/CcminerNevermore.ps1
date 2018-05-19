@@ -7,10 +7,10 @@ $Uri = "https://github.com/nemosminer/ccminerx16r-x16s/releases/download/v0.5/cc
 $Commands = [PSCustomObject]@{
     #"bitcore"         = "" #Bitcore   <<< CcminerSuprMiner < CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerZealot
     #"c11"             = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
-    "equihash"        = "" #Equihash - Beaten by Bminer by 30%
+    #"equihash"        = "" #Equihash - Beaten by Bminer by 30%   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
     #"groestl"        = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     "hmq1725"         = "" #HMQ1725   <<< CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerSuprMiner < CcminerNevermore
-    "hsr"             = "" #HSR
+    #"hsr"             = "" #HSRCcminerAlexis           X11evo                                  108,77 MH/s    1,063         85 %  0,471             0,009776 Zpool-1
     "jha"             = "" #JHA - NOT TESTED
     #"keccak"          = "" #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
     #"keccakc"         = "" #Keccakc   <<< CcminerNevermore < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerCornzKeccakC < CcminerAlexis
@@ -24,11 +24,11 @@ $Commands = [PSCustomObject]@{
     "timetravel"      = "" #Timetravel   <<< CcminerTpruvot < CcminerAllium < CcminerNanashi < CcminerSkunk < CcminerSuprMiner < CcminerNevermore
     #"tribus"         = "" #Tribus   <<< CcminerSkunk < CcminerNanashi < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerSuprMiner
     "veltor"          = "" #Veltor - NOT TESTED
-    "x11evo"          = "" #X11evo
+    #"x11evo"          = "" #X11evo   <<< CcminerNanashi < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerLyra2z < CcminerNevermore < CcminerSib < CcminerAlexis
     "x12"             = "" #X12 - NOT TESTED
     "x16r"            = "" #Raven
     #"x16s"           = "" #Pigeon   <<< CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerZealot
-    "x17"             = "" #X17
+    #"x17"             = "" #X17  <<< CcminerKlaust < CcminerLyra2RE2 < CcminerLyra2z < CcminerNanashi < CcminerSp < CcminerSuprMiner < CcminerSkunk < CcminerAllium < CcminerNevermore < CcminerAlexis < CcminerZealot
    
     # ASIC - never profitable 11/05/2018
     #"blake"          = "" #blake
