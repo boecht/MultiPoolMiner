@@ -39,11 +39,15 @@
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": "$ExcludeAlgorithm",
   "ExcludeMinerName": [
+    "ClaymoreNvidia",
     "Dstm",
+    "Eminer",
+    "EthminerNvidia",
     "Ewbf",
     "JustAMinerNeoScrypt",
     "NsgminerNvidia",
     "PalginNvidia",
+    "PhoenixMinerNvidia",
     "XmrigNvidia"
   ],
   "ExcludePoolName": [
