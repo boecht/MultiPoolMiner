@@ -7,7 +7,7 @@ $HashSHA256 = "4CC2FF8C07F17E940A1965B8D0F7DD8508096A4E4928704912FA96C442346642"
 $Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.4a/excavator_v1.4.4a_NVIDIA_Win64.zip"
 
 $Commands = [PSCustomObject]@{
-    "daggerhashimoto" = @() #Ethash   <<< ClaymoreNvidia
+    #"daggerhashimoto" = @() #Ethash   --- PROFIT <<< ExcavatorNvidia2 < ExcavatorNvidia1 < Eminer < ClaymoreNvidia < EthminerNvidia < PhoenixMinerNvidia
     #"equihash" = @() #Equihash   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
     #"lyra2rev2" = @() #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
     "neoscrypt" = @() #NeoScrypt   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
@@ -21,9 +21,9 @@ $Commands = [PSCustomObject]@{
     #"sia"            = "" #Sia
     
     # MPM forgot these
-    #"daggerhashimoto_decred" = @()
-    #"daggerhashimoto_sia" = @()
-    "daggerhashimoto_pascal" = @()
+    #"daggerhashimoto_decred" = @()   --- PROFIT
+    #"daggerhashimoto_sia" = @()   --- PROFIT
+    #"daggerhashimoto_pascal" = @()   --- PROFIT
     #"cryptonight" = @() #CryptoNight   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
     #"keccak" = @() #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
 }
