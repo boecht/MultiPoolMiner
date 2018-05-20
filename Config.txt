@@ -39,7 +39,6 @@
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": "$ExcludeAlgorithm",
   "ExcludeMinerName": [
-    "ClaymoreNvidia",
     "Dstm",
     "Eminer",
     "EthminerNvidia",
