@@ -45,7 +45,7 @@ $Commands = [PSCustomObject]@{
     #"quark" = "" #Quark
     #"qubit" = "" #Qubit
     #"sha256d" = "" #SHA256d (bitcoin)
-    "sha256t" = "" #SHA256 x3 (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
+    #"sha256t" = "" #SHA256 x3 (SHA256t=S3)   --- PROFIT <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     #"sia" = "" #SIA (Blake2B)
     #"sib" = "" #Sibcoin (X11+Streebog)
     #"scrypt" = "" #Scrypt
@@ -55,7 +55,7 @@ $Commands = [PSCustomObject]@{
     "skein2" = "" #Double Skein (Woodcoin)
     #"skunk" = "" #Skein Cube Fugue Streebog   <<< CcminerAllium < CcminerNevermore < CcminerSuprMiner < CcminerNanashi < CcminerSkunk
     "stellite" = "" #Cryptonight v3
-    "s3" = "" #S3 (1Coin) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
+    #"s3" = "" #S3 (1Coin) (SHA256t=S3)   --- PROFIT <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     #"timetravel" = "" #Machinecoin permuted x8   <<< CcminerTpruvot < CcminerAllium < CcminerNanashi < CcminerSkunk < CcminerSuprMiner < CcminerNevermore
     #"tribus" = "" #Denarius   <<< CcminerSkunk < CcminerNanashi < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerSuprMiner
     #"vanilla" = "" #Blake256-8 (VNL)
