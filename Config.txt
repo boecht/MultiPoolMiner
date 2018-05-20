@@ -62,7 +62,7 @@
   "Donate": "$Donate",
   "Proxy": "$Proxy",
   "Delay": "$Delay",
-  "Watchdog": "$false",
+  "Watchdog": "$true",
   "WatchdogExcludeAlgorithm": [ 
     "X16R"
   ],
