@@ -50,6 +50,7 @@
     "XmrigNvidia"
   ],
   "ExcludePoolName": [
+    "BlockMasters",
     "MiningPoolHubCoins",
     "YiiMP",
     "ZergPool"
