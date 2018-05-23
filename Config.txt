@@ -36,9 +36,7 @@
   ],
   "Algorithm": "$Algorithm",
   "MinerName": "$MinerName",
-  "PoolName": [
-    "Zpool"
-  ],
+  "PoolName": "$PoolName",
   "ExcludeAlgorithm": "$ExcludeAlgorithm",
   "ExcludeMinerName": [
     "Dstm",
