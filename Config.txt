@@ -4,13 +4,13 @@
       "User": "$UserName",
       "Worker": "$WorkerName",
       "API_ID": "$API_ID",
-      "API_Key": "$API_Key"
+      "API_Key": "$Wallet"
     },
     "MiningPoolHubCoins": {
       "User": "$UserName",
       "Worker": "$WorkerName",
       "API_ID": "$API_ID",
-      "API_Key": "$API_Key"
+      "API_Key": "$Wallet"
     },
     "NiceHash": {
       "BTC": "$Wallet",
@@ -27,7 +27,7 @@
   "UserName": "$UserName",
   "WorkerName": "$WorkerName",
   "API_ID": "$API_ID",
-  "API_Key": "$API_Key",
+  "API_Key": "$Wallet",
   "Interval": "$Interval",
   "Region": "Europe",
   "SSL": "$SSL",
