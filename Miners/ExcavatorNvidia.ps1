@@ -8,30 +8,30 @@ $HashSHA256 = "4CC2FF8C07F17E940A1965B8D0F7DD8508096A4E4928704912FA96C442346642"
 $Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.4a/excavator_v1.4.4a_NVIDIA_Win64.zip"
 
 $Commands = [PSCustomObject]@{
-    #"daggerhashimoto:1" = @() #Ethash 1 thread   --- PROFIT <<< ExcavatorNvidia2 < ExcavatorNvidia1 < Eminer < ClaymoreNvidia < EthminerNvidia < PhoenixMinerNvidia
-    #"equihash:1"        = @() #Equihash 1 thread   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
-    "neoscrypt:1"       = @() #NeoScrypt 1 thread   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
-    #"lbry:1"            = @() #Lbry 1 thread   ASIC - never profitable 20/04/2018
-    #"lyra2rev2:1"       = @() #Lyra2RE2 1 thread   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
-    #"pascal:1"          = @() #Pascal 1 thread   <<< ExcavatorNvidia1 < ExcavatorNvidia2
-    #"daggerhashimoto:2" = @() #Ethash 2 threads   --- PROFIT <<< ExcavatorNvidia2 < ExcavatorNvidia1 < Eminer < ClaymoreNvidia < EthminerNvidia < PhoenixMinerNvidia
-    #"equihash:2"        = @() #Equihash 2 threads   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
-    #"neoscrypt:2"       = @() #NeoScrypt 2 threads; out of memory
-    #"lbry:2"            = @() #Lbry 2 threads   ASIC - never profitable 20/04/2018
-    #"lyra2rev2:2"       = @() #Lyra2RE2 2 threads   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
-    #"pascal:2"          = @() #Pascal 2 threads   --- PROFIT <<< ExcavatorNvidia1 < ExcavatorNvidia2
+    #"daggerhashimoto:1"        = @() #Ethash 1 thread   --- PROFIT <<< ExcavatorNvidia2 < ExcavatorNvidia1 < Eminer < ClaymoreNvidia < EthminerNvidia < PhoenixMinerNvidia
+    "equihash:1"                = @() #Equihash 1 thread   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
+    "neoscrypt:1"               = @() #NeoScrypt 1 thread   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
+    #"lbry:1"                   = @() #Lbry 1 thread   ASIC - never profitable 20/04/2018
+    "lyra2rev2:1"               = @() #Lyra2RE2 1 thread   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
+    #"pascal:1"                 = @() #Pascal 1 thread   <<< ExcavatorNvidia1 < ExcavatorNvidia2
+    #"daggerhashimoto:2"        = @() #Ethash 2 threads   --- PROFIT <<< ExcavatorNvidia2 < ExcavatorNvidia1 < Eminer < ClaymoreNvidia < EthminerNvidia < PhoenixMinerNvidia
+    "equihash:2"                = @() #Equihash 2 threads   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
+    #"neoscrypt:2"              = @() #NeoScrypt 2 threads; out of memory
+    #"lbry:2"                   = @() #Lbry 2 threads   ASIC - never profitable 20/04/2018
+    "lyra2rev2:2"               = @() #Lyra2RE2 2 threads   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
+    #"pascal:2"                 = @() #Pascal 2 threads   --- PROFIT <<< ExcavatorNvidia1 < ExcavatorNvidia2
     
     # MPM forgot these
     #"daggerhashimoto_decred:1" = @()   --- PROFIT
-    #"daggerhashimoto_sia:1" = @()   --- PROFIT
+    #"daggerhashimoto_sia:1"    = @()   --- PROFIT
     #"daggerhashimoto_pascal:1" = @()   --- PROFIT
-    #"cryptonight:1" = @() #CryptoNight   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
-    #"keccak:1" = @() #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
+    #"cryptonight:1"            = @() #CryptoNight   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
+    "keccak:1"                  = @() #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
     #"daggerhashimoto_decred:2" = @()   --- PROFIT
-    #"daggerhashimoto_sia:2" = @()   --- PROFIT
+    #"daggerhashimoto_sia:2"    = @()   --- PROFIT
     #"daggerhashimoto_pascal:2" = @()   --- PROFIT
-    #"cryptonight:2" = @() #CryptoNight   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
-    "keccak:2" = @() #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
+    #"cryptonight:2"            = @() #CryptoNight   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
+    "keccak:2"                  = @() #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
