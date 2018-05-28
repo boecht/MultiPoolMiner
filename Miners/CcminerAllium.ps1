@@ -9,13 +9,13 @@ $Commands = [PSCustomObject]@{
     
     # MPM forgot these
     "bastion" = "" #Hefty bastion
-    #"bitcore" = "" #Timetravel-10   <<< CcminerSuprMiner < CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerZealot
+    "bitcore" = "" #Timetravel-10   <<< CcminerSuprMiner < CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerZealot
     #"blake" = "" #Blake 256 (SFR)
     #"blake2s" = "" #Blake2-S 256 (NEVA)
     #"blakecoin" = "" #Fast Blake 256 (8 rounds)
     "bmw" = "" #BMW 256
     "cryptolight" = "" #AEON cryptonight (MEM/2)
-    "cryptonight" = "" #XMR cryptonight v1 (old)   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
+    #"cryptonight" = "" #XMR cryptonight v1 (old)   <<< CcminerTpruvot < ExcavatorNvidia1 < ExcavatorNvidia2 < CcminerAllium < CcminerNevermore
     "c11/flax" = "" #X11 variant
     #"decred" = "" #Decred Blake256
     "deep" = "" #Deepcoin
@@ -24,7 +24,7 @@ $Commands = [PSCustomObject]@{
     "fresh" = "" #Freshcoin (shavite 80)
     "fugue256" = "" #Fuguecoin
     "graft" = "" #Cryptonight v8
-    "groestl" = "" #Groestlcoin   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
+    #"groestl" = "" #Groestlcoin   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     "hmq1725" = "" #Doubloons / Espers   <<< CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerSuprMiner < CcminerNevermore
     "hsr" = "" #use to mine Hshare   <<< CcminerSuprMiner < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerAnxmodPhi < CcminerPolytimos < CcminerAlexis
     "jackpot" = "" #JHA v8
