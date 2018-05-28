@@ -64,13 +64,18 @@
   "Proxy": "$Proxy",
   "Delay": "$Delay",
   "Watchdog": "$true",
-  "WatchdogExcludeAlgorithm": [ 
-    "X16R"
-  ],
-  "WatchdogExcludeMinerName": "$WatchdogExcludeMinerName",
   "MinerStatusURL": "https://multipoolminer.io/monitor/miner.php",
   "MinerStatusKey": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
   "SwitchingPrevention": "5",
   "ShowMinerWindow": "$ShowMinerWindow",
-  "UseFastestMinerPerAlgoOnly": "$true"
+  "ShowPoolBalances": "$true",
+  "ExtendIntervalAlgorithm": [
+    "X16R",
+    "X16S"
+  ],
+  "ExtendIntervalMinerName": [
+    "PalginNvidia"
+  ],
+  "UseFastestMinerPerAlgoOnly": "$true",
+  "IgnoreMinerFee":  "$IgnoreMinerFee"
 }
