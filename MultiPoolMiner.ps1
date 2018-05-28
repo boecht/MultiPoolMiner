@@ -203,6 +203,9 @@ while ($true) {
         )
     }
 
+    # This is used when getting pool balances so it doesn't get pool balances of the donation address instead
+    $UserConfig = $Config
+
     #Give API access to the current running configuration
     $API.Config = $Config
 
