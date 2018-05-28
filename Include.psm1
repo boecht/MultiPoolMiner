@@ -20,7 +20,7 @@ function Get-Balance {
         Foreach($Rate in ($Rates.PSObject.Properties)) {
             # Round BTC to 8 decimals, everything else to 2
             if ($Rate.Name -eq "BTC") {
-                $_ | Add-Member "Total_BTC" ("{0:N8}" -f ([Double]$Rate.Value * $_.total))
+                $_ | Add-Member "Total_mBTC" ("{0:N8}" -f ([Double]$Rate.Value * $_.total * 1000))
             } 
             else {
                 $_ | Add-Member "Total_$($Rate.Name)" ("{0:N2}" -f ([Double]$Rate.Value * $_.total))
