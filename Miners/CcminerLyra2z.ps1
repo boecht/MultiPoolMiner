@@ -6,10 +6,10 @@ $Uri = "https://github.com/djm34/ccminer-msvc2015/releases/download/v0.3.0/ccmin
 
 $Commands = [PSCustomObject]@{
     "c11"             = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
-    #"groestl"         = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
+    #"groestl"        = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
     "keccak"          = "" #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
     "lyra2h"          = "" #Lyra2h
-    "lyra2v2"        = "" #Lyra2RE2   <<< CcminerPolytimos > ExcavatorNvidia2 > CcminerCornzKeccakC > ExcavatorNvidia1 > CcminerXevan > CcminerAnxmodPhi > CcminerAlexis > CcminerNanashi > CcminerLyra2RE2 > CcminerSkunk > CcminerTpruvot > CcminerAllium > CcminerSuprMiner > CcminerNevermore > CcminerSib > CcminerKlaust > CcminerSp > CcminerLyra2z
+    "lyra2v2"         = "" #Lyra2RE2   <<< CcminerPolytimos > ExcavatorNvidia2 > CcminerCornzKeccakC > ExcavatorNvidia1 > CcminerXevan > CcminerAnxmodPhi > CcminerAlexis > CcminerNanashi > CcminerLyra2RE2 > CcminerSkunk > CcminerTpruvot > CcminerAllium > CcminerSuprMiner > CcminerNevermore > CcminerSib > CcminerKlaust > CcminerSp > CcminerLyra2z
     "lyra2z"          = "" #Lyra2z   <<< CcminerSkunk < CcminerNevermore < CcminerLyra2z < CcminerNanashi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium
     "neoscrypt"       = "" #NeoScrypt   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
     "skein"           = "" #Skein   <<< CcminerNevermore < CcminerLyra2RE2 < CcminerAllium < CcminerSuprMiner < CcminerSkunk < CcminerLyra2z < CcminerNanashi < CcminerSib < CcminerAlexis < CcminerKlaust < CcminerSp < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAnxmodPhi
@@ -48,7 +48,7 @@ $Commands = [PSCustomObject]@{
     #"scrypt"         = "" #Scrypt
     "scrypt-jane"     = "" #Scrypt-jane Chacha
     "skein2"          = "" #Double Skein (Woodcoin)
-    #"s3"              = "" #S3 (1Coin) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
+    #"s3"             = "" #S3 (1Coin) (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
     #"vanilla"        = "" #Blake256-8 (VNL)
     "veltor"          = "" #Thorsriddle streebog
     "whirlcoin"       = "" #Old Whirlcoin (Whirlpool algo)
