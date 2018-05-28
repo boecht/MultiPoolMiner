@@ -72,5 +72,5 @@
   "MinerStatusKey": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
   "SwitchingPrevention": "5",
   "ShowMinerWindow": "$ShowMinerWindow",
-  "UseFastestMinerPerAlgoOnly": "$UseFastestMinerPerAlgoOnly"
+  "UseFastestMinerPerAlgoOnly": "$true"
 }
