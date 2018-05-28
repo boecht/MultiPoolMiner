@@ -23,9 +23,9 @@ $Commands = [PSCustomObject]@{
     
     # MPM forgot these
     #"blake"     = "" #Blake256-14rounds(SFR)
-    "vcash"     = "" #Blake256-8rounds (XVC)
-    "lyra2"     = "" #(LyraBar)   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
-    "skein2"    = "" #Double Skein (Woodcoin)
+    "vcash"      = "" #Blake256-8rounds (XVC)
+    "lyra2"      = "" #(LyraBar)   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
+    "skein2"     = "" #Double Skein (Woodcoin)
     #"quark"     = "" #Quark (Quarkcoin)
     #"qubit"     = "" #Qubit
     #"x11"       = "" #X11 (DarkCoin)
@@ -33,9 +33,9 @@ $Commands = [PSCustomObject]@{
     #"x14"       = "" #X14 (BernCoin)
     #"x15"       = "" #X15 (Joincoin)
     #"x17"       = "" #X17 (XVG)   --- BROKEN
-    "whirlpool" = "" #whirlpool (JoinCoin)
+    "whirlpool"  = "" #whirlpool (JoinCoin)
     #"sia"       = "" #Sia (SIAcoin)
-    "veltor"    = "" #Thor's Riddle(?) (Veltor)
+    "veltor"     = "" #Thor's Riddle(?) (Veltor)
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
