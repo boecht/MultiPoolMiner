@@ -63,7 +63,7 @@ $AHashPool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         $AHashPool_Currencies | ForEach-Object {
             [PSCustomObject]@{
                 Algorithm     = $AHashPool_Algorithm_Norm
-                Info          = "$AHashPool_Coin {$AHashPool_Request.$_.fees.ToString("N2")}"
+                Info          = "$AHashPool_Coin [$(($_.Fees | Foreach-Object {$AHashPool_Request.$_.fees.ToString("N2")}) -join '%/')%]"
                 Price         = $Stat.Live
                 StablePrice   = $Stat.Week
                 MarginOfError = $Stat.Week_Fluctuation
