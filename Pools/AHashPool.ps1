@@ -33,8 +33,8 @@ $AHashPool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $AHashPool_Port = $AHashPool_Request.$_.port
     $AHashPool_Algorithm = $AHashPool_Request.$_.name
     $AHashPool_Algorithm_Norm = Get-Algorithm $AHashPool_Algorithm
-    $AHashPool_Coin = "$($AHashPool_Request.$_.coins) $($AHashPool_Request.$_.fees)"
-
+    $AHashPool_Coin = "$($AHashPool_Request.$_.coins) [$($AHashPool_Request.$_.fees.ToString("N2"))%]"
+[$(($_.Fees | Foreach-Object {$_.ToString("N2")}) -join '%/')%]
     if ([Double][Double]$AHashPool_Request.$_.estimate_current -eq 0.0) {
         Write-Log "Pool API ($Name, $AHashPool_Algorithm_Norm) returned price of zero. "
         return
