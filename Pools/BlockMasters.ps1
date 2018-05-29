@@ -34,7 +34,7 @@ $BlockMasters_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore 
     $BlockMasters_Port = $BlockMasters_Request.$_.port
     $BlockMasters_Algorithm = $BlockMasters_Request.$_.name
     $BlockMasters_Algorithm_Norm = Get-Algorithm $BlockMasters_Algorithm
-    $BlockMasters_Coin = ""
+    $BlockMasters_Coin = "$($BlockMasters_Request.$_.coins)c [$($BlockMasters_Request.$_.fees.ToString("N2"))%]"
 
     $Divisor = 1000000
 
