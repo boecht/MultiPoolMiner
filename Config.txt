@@ -4,7 +4,7 @@
       "User": "$UserName",
       "Worker": "$WorkerName",
       "API_ID": "$API_ID",
-      "API_Key": "$Wallet"
+      "API_Key": "948e267918ede0b0816d7d3a8413e35b2f793178c8e2e04fa2f7cf3b6af8f4ac"
     },
     "MiningPoolHubCoins": {
       "User": "$UserName",
