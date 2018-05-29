@@ -33,7 +33,7 @@ $AHashPool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $AHashPool_Port = $AHashPool_Request.$_.port
     $AHashPool_Algorithm = $AHashPool_Request.$_.name
     $AHashPool_Algorithm_Norm = Get-Algorithm $AHashPool_Algorithm
-    $AHashPool_Coin = $AHashPool_Request.$_.coins
+    $AHashPool_Coin = "$AHashPool_Request.$_.coins $AHashPool_Request.$_.fees"
 
     if ([Double][Double]$AHashPool_Request.$_.estimate_current -eq 0.0) {
         Write-Log "Pool API ($Name, $AHashPool_Algorithm_Norm) returned price of zero. "
@@ -63,7 +63,7 @@ $AHashPool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         $AHashPool_Currencies | ForEach-Object {
             [PSCustomObject]@{
                 Algorithm     = $AHashPool_Algorithm_Norm
-                Info          = "$AHashPool_Coin $AHashPool_Request.$_.fees"
+                Info          = $AHashPool_Coin
                 Price         = $Stat.Live
                 StablePrice   = $Stat.Week
                 MarginOfError = $Stat.Week_Fluctuation
