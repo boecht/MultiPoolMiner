@@ -34,7 +34,7 @@ $HashRefinery_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore 
     $HashRefinery_Port = $HashRefinery_Request.$_.port
     $HashRefinery_Algorithm = $HashRefinery_Request.$_.name
     $HashRefinery_Algorithm_Norm = Get-Algorithm $HashRefinery_Algorithm
-    $HashRefinery_Coin = $HashRefinery_Request.$_.coins
+    $HashRefinery_Coin = "$($HashRefinery_Request.$_.coins)c [$($HashRefinery_Request.$_.fees.ToString("N2"))%]"
 
     if ([Double]$HashRefinery_Request.$_.estimate_current -eq 0.0) {
         Write-Log "Pool API ($Name, $HashRefinery_Algorithm_Norm) returned price of zero. "
