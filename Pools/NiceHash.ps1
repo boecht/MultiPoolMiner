@@ -32,7 +32,7 @@ $NiceHash_Request.result.simplemultialgo | ForEach-Object {
     $NiceHash_Port = $_.port
     $NiceHash_Algorithm = $_.name
     $NiceHash_Algorithm_Norm = Get-Algorithm $NiceHash_Algorithm
-    $NiceHash_Coin = ""
+    $NiceHash_Coin = "[5,00%]"
 
     if ($NiceHash_Algorithm_Norm -eq "Sia") {$NiceHash_Algorithm_Norm = "SiaNiceHash"} #temp fix
     if ($NiceHash_Algorithm_Norm -eq "Decred") {$NiceHash_Algorithm_Norm = "DecredNiceHash"} #temp fix
