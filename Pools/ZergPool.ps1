@@ -35,7 +35,7 @@ $ZergPool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Se
     $ZergPool_Port = $ZergPool_Request.$_.port
     $ZergPool_Algorithm = $ZergPool_Request.$_.name
     $ZergPool_Algorithm_Norm = Get-Algorithm $ZergPool_Algorithm
-    $ZergPool_Coin = ""
+    $ZergPool_Coin = "$($ZergPool_Request.$_.coins)c [$($ZergPool_Request.$_.fees.ToString("N2"))%]"
 
     $Divisor = 1000000
 
@@ -52,8 +52,8 @@ $ZergPool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Se
         "x11" {$Divisor *= 1000}
     }
 
-    if ((Get-Stat -Name "$($Name)_$($ZergPool_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($ZergPool_Algorithm_Norm)_Profit" -Value ([Double]$ZergPool_Request.$_.estimate_last24h / $Divisor) -Duration (New-TimeSpan -Days 1)}
-    else {$Stat = Set-Stat -Name "$($Name)_$($ZergPool_Algorithm_Norm)_Profit" -Value ([Double]$ZergPool_Request.$_.estimate_current / $Divisor) -Duration $StatSpan -ChangeDetection $true}
+    if ((Get-Stat -Name "$($Name)_$($ZergPool_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($ZergPool_Algorithm_Norm)_Profit" -Value ([Double]$ZergPool_Request.$_.estimate_last24h / $Divisor *(1-($ZergPool_Request.$_.fees/100))) -Duration (New-TimeSpan -Days 1)}
+    else {$Stat = Set-Stat -Name "$($Name)_$($ZergPool_Algorithm_Norm)_Profit" -Value ([Double]$ZergPool_Request.$_.estimate_current / $Divisor *(1-($ZergPool_Request.$_.fees/100))) -Duration $StatSpan -ChangeDetection $true}
 
     $ZergPool_Regions | ForEach-Object {
         $ZergPool_Region = $_
