@@ -34,7 +34,7 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
     $Zpool_Port = $Zpool_Request.$_.port
     $Zpool_Algorithm = $Zpool_Request.$_.name
     $Zpool_Algorithm_Norm = Get-Algorithm $Zpool_Algorithm
-    $Zpool_Coin = $Zpool_Request.$_.coins
+    $Zpool_Coin = "$($Zpool_Request.$_.coins)c [$($Zpool_Request.$_.fees.ToString("N2"))%]"
 
     if ([Double]$Zpool_Request.$_.estimate_current -eq 0.0) {
         Write-Log "Pool API ($Name, $Zpool_Algorithm_Norm) returned price of zero. "
