@@ -33,7 +33,7 @@ $BlazePool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $BlazePool_Port = $BlazePool_Request.$_.port
     $BlazePool_Algorithm = $BlazePool_Request.$_.name
     $BlazePool_Algorithm_Norm = Get-Algorithm $BlazePool_Algorithm
-    $BlazePool_Coin = $BlazePool_Request.$_.coins
+    $BlazePool_Coin = "$($BlazePool_Request.$_.coins)c [$($BlazePool_Request.$_.fees.ToString("N2"))%]"
 
     if ([Double]$BlazePool_Request.$_.estimate_current -eq 0.0) {
         Write-Log "Pool API ($Name, $BlazePool_Algorithm_Norm) returned price of zero. "
