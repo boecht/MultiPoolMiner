@@ -69,6 +69,7 @@
   "SwitchingPrevention": "5",
   "ShowMinerWindow": "$ShowMinerWindow",
   "ShowPoolBalances": "$true",
+  "ShowPoolBalancesExcludedPools": "$ShowPoolBalancesExcludedPools",
   "ExtendIntervalAlgorithm": [
     "X16R",
     "X16S"
