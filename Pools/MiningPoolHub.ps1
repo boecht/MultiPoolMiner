@@ -40,7 +40,7 @@ $MiningPoolHub_Request.return | ForEach-Object {
         Write-Log "Pool API ($Name, $MiningPoolHub_Algorithm_Norm) returned price of zero. "
         return
     }
-    
+
     $Divisor = 1000000000
 
     $Stat = Set-Stat -Name "$($Name)_$($MiningPoolHub_Algorithm_Norm)_Profit" -Value ([Double]$_.profit / $Divisor *0.972) -Duration $StatSpan -ChangeDetection $true

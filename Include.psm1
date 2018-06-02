@@ -6,16 +6,14 @@ function Get-Balance {
     [CmdletBinding()]
     param($Config, $Rates)
 
-    Write-Log "Getting pool balances"
-
     # If rates weren't specified, just use 1 BTC = 1 BTC
     if ($Rates -eq $Null) {
         $Rates = [PSCustomObject]@{BTC = [Double]1}
     }
     
-    $Balances = Get-ChildItem "Balances" -File | Where-Object {$Config.Pools.$($_.BaseName) -and ($Config.ExcludePoolName -inotcontains $_.BaseName) -or $Config.ShowPoolBalancesExcludedPools} | ForEach-Object {
+    $Balances = @(Get-ChildItem "Balances" -File | Where-Object {$Config.Pools.$($_.BaseName) -and ($Config.ExcludePoolName -inotcontains $_.BaseName) -or $Config.ShowPoolBalancesExcludedPools} | ForEach-Object {
         Get-ChildItemContent "Balances\$($_.Name)" -Parameters @{Config = $Config}
-    } | Foreach-Object {$_.Content | Add-Member Name $_.Name -PassThru}
+    } | Foreach-Object {$_.Content | Add-Member Name $_.Name -PassThru})
 
     # Add total of totals
     $Balances += [PSCustomObject]@{

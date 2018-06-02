@@ -40,7 +40,7 @@ $HashRefinery_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore 
         Write-Log "Pool API ($Name, $HashRefinery_Algorithm_Norm) returned price of zero. "
         return
     }
-    
+
     $Divisor = 1000000
 
     switch ($HashRefinery_Algorithm_Norm) {

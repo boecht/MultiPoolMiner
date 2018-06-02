@@ -39,24 +39,8 @@ $BlazePool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         Write-Log "Pool API ($Name, $BlazePool_Algorithm_Norm) returned price of zero. "
         return
     }
-    
-    $Divisor = 1000000
 
-    switch ($BlazePool_Algorithm_Norm) {
-        "blake"     {$Divisor *= 1000}
-        "blake2s"   {$Divisor *= 1000}
-        "blakecoin" {$Divisor *= 1000}
-        "decred"    {$Divisor *= 1000}
-        "equihash"  {$Divisor /= 1000}
-        "keccak"    {$Divisor *= 1000}
-        "keccakc"   {$Divisor *= 1000}
-        "quark"     {$Divisor *= 1000}
-        "qubit"     {$Divisor *= 1000}
-        "scrypt"    {$Divisor *= 1000}
-        "vanilla"   {$Divisor *= 1000}
-        "x11"       {$Divisor *= 1000}
-        "yescrypt"  {$Divisor /= 1000}
-    }
+    $Divisor = 1000000 * [Double]$BlazePool_Request.$_.mbtc_mh_factor
     
     if ((Get-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit" -Value ([Double]$BlazePool_Request.$_.estimate_last24h / $Divisor *(1-($BlazePool_Request.$_.fees/100))) -Duration (New-TimeSpan -Days 1)}
     else {$Stat = Set-Stat -Name "$($Name)_$($BlazePool_Algorithm_Norm)_Profit" -Value ([Double]$BlazePool_Request.$_.estimate_current / $Divisor *(1-($BlazePool_Request.$_.fees/100))) -Duration $StatSpan -ChangeDetection $true}

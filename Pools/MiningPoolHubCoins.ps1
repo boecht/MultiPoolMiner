@@ -33,9 +33,14 @@ $MiningPoolHubCoins_Request.return | Where-Object {$_.pool_hash -gt 0} | ForEach
     $MiningPoolHubCoins_Port = $_.port
     $MiningPoolHubCoins_Algorithm = $_.algo
     $MiningPoolHubCoins_Algorithm_Norm = Get-Algorithm $MiningPoolHubCoins_Algorithm
-    $MiningPoolHubCoins_Coin = (Get-Culture).TextInfo.ToTitleCase(($_.coin_name -replace "-", " " -replace "_", " ")) -replace " "
+    $MiningPoolHubCoins_Coin = "$((Get-Culture).TextInfo.ToTitleCase(($_.coin_name -replace "-", " " -replace "_", " ")) -replace " ") [2,80%]"
 
     if ($MiningPoolHubCoins_Algorithm_Norm -eq "Sia") {$MiningPoolHubCoins_Algorithm_Norm = "SiaClaymore"} #temp fix
+
+    if ([Double]$_.profit -eq 0.0) {
+        Write-Log "Pool API ($Name, $MiningPoolHubCoins_Algorithm_Norm) returned price of zero. "
+        return
+    }
 
     $Divisor = 1000000000
 
