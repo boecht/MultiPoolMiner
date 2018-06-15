@@ -41,18 +41,7 @@ $HashRefinery_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore 
         return
     }
 
-    $Divisor = 1000000
-
-    switch ($HashRefinery_Algorithm_Norm) {
-        "blake2s" {$Divisor *= 1000}
-        "blakecoin" {$Divisor *= 1000}
-        "decred" {$Divisor *= 1000}
-        "equihash" {$Divisor /= 1000}
-        "quark" {$Divisor *= 1000}
-        "qubit" {$Divisor *= 1000}
-        "scrypt" {$Divisor *= 1000}
-        "x11" {$Divisor *= 1000}
-    }
+    $Divisor = 1000000 * [Double]$HashRefinery_Request.$HashRefinery_Algorithm.mbtc_mh_factor
 
     if ((Get-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit") -eq $null) {$Stat = Set-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit" -Value ([Double]$HashRefinery_Request.$_.estimate_last24h / $Divisor *(1-($HashRefinery_Request.$_.fees/100))) -Duration (New-TimeSpan -Days 1)}
     else {$Stat = Set-Stat -Name "$($Name)_$($HashRefinery_Algorithm_Norm)_Profit" -Value ([Double]$HashRefinery_Request.$_.estimate_current / $Divisor *(1-($HashRefinery_Request.$_.fees/100))) -Duration $StatSpan -ChangeDetection $true}

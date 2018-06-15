@@ -27,7 +27,7 @@ if (($NiceHash_Request.result.simplemultialgo | Measure-Object).Count -le 1) {
 
 $NiceHash_Regions = "eu", "usa", "hk", "jp", "in", "br"
 
-$NiceHash_Request.result.simplemultialgo | ForEach-Object {
+$NiceHash_Request.result.simplemultialgo | Where-Object {$_.paying -gt 0} <# algos paying 0 fail stratum #> | ForEach-Object {
     $NiceHash_Host = "nicehash.com"
     $NiceHash_Port = $_.port
     $NiceHash_Algorithm = $_.name
@@ -36,11 +36,6 @@ $NiceHash_Request.result.simplemultialgo | ForEach-Object {
 
     if ($NiceHash_Algorithm_Norm -eq "Sia") {$NiceHash_Algorithm_Norm = "SiaNiceHash"} #temp fix
     if ($NiceHash_Algorithm_Norm -eq "Decred") {$NiceHash_Algorithm_Norm = "DecredNiceHash"} #temp fix
-
-    if ([Double]$_.paying -eq 0.0) {
-        Write-Log "Pool API ($Name, $NiceHash_Algorithm_Norm) returned price of zero. "
-        return
-    }
 
     $Divisor = 1000000000
 
