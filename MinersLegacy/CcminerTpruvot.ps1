@@ -1,50 +1,53 @@
 using module ..\Include.psm1
 
 $Path = ".\Bin\NVIDIA-TPruvot\ccminer-x64.exe"
-$HashSHA256 = "9156D5FC42DAA9C8739D04C3456DA8FBF3E9DC91D4894D351334F69A7CEE58C5"
-$Uri = "https://github.com/tpruvot/ccminer/releases/download/2.2.5-tpruvot/ccminer-x64-2.2.5-cuda9.7z"
+$HashSHA256 = "9DFE2C651CFFB399D8C9603A840C90707BD1E1D70CE6FB35DDC3BD3BD47A719C"
+$Uri = "https://github.com/tpruvot/ccminer/releases/download/2.2.6-tpruvot/ccminer-x64-2.2.6-phi2-cuda9.7z"
 
 $Commands = [PSCustomObject]@{
     #GPU - profitable 20/04/2018
-    "bastion"         = "" #bastion
-    "bitcore"         = "" #Bitcore   <<< CcminerSuprMiner < CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerNevermore < CcminerZealot
-    "bmw"             = "" #bmw
-    "c11"             = "" #C11   <<< CcminerLyra2RE2 < CcminerNanashi < CcminerSkunk < CcminerLyra2z < CcminerTpruvot < CcminerKlaust < CcminerNevermore < CcminerSuprMiner < CcminerSp < CcminerSib < CcminerAlexis
-    "deep"            = "" #deep
-    "dmd-gr"          = "" #dmd-gr
-    "equihash"        = "" #Equihash - Beaten by Bminer by 30%   <<< CcminerNanashi < CcminerSkunk < CcminerNevermore < CcminerAllium < CcminerSuprMiner < CcminerTpruvot < ExcavatorNvidia1 < Dstm < Ewbf < ExcavatorNvidia2 < BMiner
-    "fresh"           = "" #fresh
-    "fugue256"        = "" #Fugue256
-    #"groestl"        = "" #Groestl   <<< CcminerNanashi < CcminerNevermore < CcminerLyra2RE2 < CcminerTpruvot < CcminerAllium < CcminerLyra2z < CcminerSuprMiner < CcminerSkunk < CcminerSp < CcminerKlaust
-    "hmq1725"        = "" #HMQ1725   <<< CcminerNanashi < CcminerSkunk < CcminerAllium < CcminerTpruvot < CcminerSuprMiner < CcminerNevermore
-    "jackpot"         = "" #JackPot
-    "keccak"          = "" #Keccak   <<< CcminerPolytimos < CcminerSkunk < CcminerNanashi < CcminerLyra2RE2 < CcminerLyra2z < CcminerSib < CcminerSuprMiner < CcminerAllium < CcminerSp < CcminerNevermore < CcminerAnxmodPhi < CcminerTpruvot < CcminerAlexis < CcminerKlaust < CcminerXevan < CcminerCornzKeccakC < ExcavatorNvidia1 < ExcavatorNvidia2
-    "keccakc"         = "" #keccakc   <<< CcminerNevermore < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerCornzKeccakC < CcminerAlexis
-    "luffa"           = "" #Luffa
-    "lyra2"          = "" #lyra2re   <<< CcminerSp < CcminerSib < CcminerLyra2RE2 < CcminerLyra2z < CcminerSkunk < CcminerNanashi < CcminerSuprMiner < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerXevan < CcminerPolytimos < CcminerCornzKeccakC < CcminerAlexis < CcminerAnxmodPhi
-    "lyra2v2"        = "" #Lyra2RE2   <<< CcminerPolytimos < ExcavatorNvidia2 < CcminerCornzKeccakC < ExcavatorNvidia1 < CcminerXevan < CcminerAnxmodPhi < CcminerAlexis < CcminerNanashi < CcminerLyra2RE2 < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerNevermore < CcminerSib < CcminerKlaust < CcminerSp < CcminerLyra2z
-    "lyra2z"         = "" #Lyra2z, ZCoin   <<< CcminerSkunk < CcminerNevermore < CcminerLyra2z < CcminerNanashi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium
-    "neoscrypt"       = "" #NeoScrypt   <<< CcminerSp < CcminerLyra2RE2 < CcminerSuprMiner < CcminerSib < NsgminerNvidia < CcminerLyra2z < CcminerKlaust < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerSkunk < CcminerNanashi < JustAMinerNeoScrypt < ExcavatorNvidia1
-    "penta"           = "" #Pentablake
-    "phi"            = "" #PHI   <<< CcminerAnxmodPhi < CcminerSuprMiner < CcminerTpruvot < CcminerAllium < CcminerNevermore < CcminerZealot
-    "polytimos"       = "" #Polytimos
-    "scryptjane:nf"   = "" #scryptjane:nf
-    #"sha256t"        = "" #sha256t (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
-    #"skein"          = "" #Skein
-    "skein2"          = "" #skein2
-    "skunk"          = "" #Skunk   <<< CcminerSkunk
-    #"s3"             = "" #S3 (SHA256t=S3)   <<< CcminerNanashi < CcminerSkunk < CcminerSp < CcminerKlaust < CcminerLyra2RE2 < CcminerSuprMiner < CcminerNevermore < CcminerLyra2z < CcminerTpruvot < CcminerAllium
-    "timetravel"     = "" #Timetravel   <<< CcminerTpruvot < CcminerAllium < CcminerNanashi < CcminerSkunk < CcminerSuprMiner < CcminerNevermore
-    "tribus"         = "" #Tribus   <<< CcminerSkunk < CcminerNanashi < CcminerNevermore < CcminerTpruvot < CcminerAllium < CcminerSuprMiner
-    "veltor"          = "" #Veltor
-    #"whirlpool"      = "" #Whirlpool
-    #"whirlpoolx"     = "" #whirlpoolx
-    "wildkeccak"      = "" #wildkeccak
-    "x11evo"          = "" #X11evo   <<< CcminerNanashi < CcminerSkunk < CcminerTpruvot < CcminerAllium < CcminerSuprMiner < CcminerLyra2z < CcminerNevermore < CcminerSib < CcminerAlexis
-    "x16r"            = "" #X16r   <<< CcminerSuprMiner <<< CcminerNevermore
-    #"X16s"           = "" #X16s
-    #"x17"            = "" #x17
-    "zr5"             = "" #zr5
+    "allium"        = "" #Garlic
+    "bastion"       = "" #bastion
+    "bitcore"       = "" #Bitcore
+    "bmw"           = "" #bmw
+    #"c11"          = "" #C11
+    "deep"          = "" #deep
+    "dmd-gr"        = "" #dmd-gr
+    #"equihash"     = "" #Equihash - Beaten by Bminer by 30%
+    "fresh"         = "" #fresh
+    "fugue256"      = "" #Fugue256
+    "groestl"       = "" #Groestl
+    "hmq1725"       = "" #HMQ1725
+    "jackpot"       = "" #JackPot
+    "keccak"        = "" #Keccak
+    "keccakc"       = "" #keccakc
+    "luffa"         = "" #Luffa
+    "lyra2"         = "" #lyra2re
+    "lyra2v2"       = "" #Lyra2RE2
+    "lyra2z"        = "" #Lyra2z, ZCoin
+    "neoscrypt"     = "" #NeoScrypt
+    "penta"         = "" #Pentablake
+    #"phi"           = "" #old PHI
+    "phi2"          = "" #LUX
+    "polytimos"     = "" #Polytimos
+    "scryptjane:nf" = "" #scryptjane:nf
+    "sha256t"       = "" #sha256t
+    #"skein"        = "" #Skein
+    "skein2"        = "" #skein2
+    #"skunk"        = "" #Skunk
+    "s3"            = "" #S3
+    "timetravel"    = "" #Timetravel
+    "tribus"        = "" #Tribus
+    "veltor"        = "" #Veltor
+    #"whirlpool"    = "" #Whirlpool
+    #"whirlpoolx"   = "" #whirlpoolx
+    "wildkeccak"    = "" #wildkeccak
+    "x11evo"        = "" #X11evo
+    "x12"           = "" #X12
+    "x16r"          = "" #X16r
+    #"X16s"         = "" #X16s
+    #"x17"          = "" #x17
+    "zr5"           = "" #zr5
 
     # ASIC - never profitable 20/04/2018
     #"blake"          = "" #blake
@@ -81,14 +84,21 @@ $Commands | Get-Member -MemberType NoteProperty | Select-Object -ExpandProperty 
 
     $Algorithm_Norm = Get-Algorithm $_
 
+    Switch ($Algorithm_Norm) {
+        "PHI"   {$ExtendInterval = 3}
+        "X16R"  {$ExtendInterval = 10}
+        default {$ExtendInterval = 0}
+    }
+
     [PSCustomObject]@{
-        Type       = "NVIDIA"
-        Path       = $Path
-        HashSHA256 = $HashSHA256
-        Arguments  = "-a $_ -o $($Pools.$Algorithm_Norm.Protocol)://$($Pools.$Algorithm_Norm.Host):$($Pools.$Algorithm_Norm.Port) -u $($Pools.$Algorithm_Norm.User) -p $($Pools.$Algorithm_Norm.Pass)$($Commands.$_) --submit-stale"
-        HashRates  = [PSCustomObject]@{$Algorithm_Norm = $Stats."$($Name)_$($Algorithm_Norm)_HashRate".Week}
-        API        = "Ccminer"
-        Port       = 4068
-        URI        = $Uri
+        Type           = "NVIDIA"
+        Path           = $Path
+        HashSHA256     = $HashSHA256
+        Arguments      = "-a $_ -o $($Pools.$Algorithm_Norm.Protocol)://$($Pools.$Algorithm_Norm.Host):$($Pools.$Algorithm_Norm.Port) -u $($Pools.$Algorithm_Norm.User) -p $($Pools.$Algorithm_Norm.Pass)$($Commands.$_) --submit-stale"
+        HashRates      = [PSCustomObject]@{$Algorithm_Norm = $Stats."$($Name)_$($Algorithm_Norm)_HashRate".Week}
+        API            = "Ccminer"
+        Port           = 4068
+        URI            = $Uri
+        ExtendInterval = $ExtendInterval
     }
 }
