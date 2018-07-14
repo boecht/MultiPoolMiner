@@ -29,7 +29,7 @@
   "API_ID": "$API_ID",
   "API_Key": "$Wallet",
   "Interval": "$Interval",
-  "Region": "Europe",
+  "Region": "europe",
   "SSL": "$SSL",
   "DeviceName": [
     "NVIDIA"
@@ -67,16 +67,10 @@
   "MinerStatusURL": "https://multipoolminer.io/monitor/miner.php",
   "MinerStatusKey": "18qAwwg11ZqsRyB32y686kyNTKVZ6emMoW",
   "SwitchingPrevention": "5",
+  "DisableAutoUpdate": "$true",
   "ShowMinerWindow": "$ShowMinerWindow",
-  "ShowPoolBalances": "$true",
-  "ShowPoolBalancesExcludedPools": "$ShowPoolBalancesExcludedPools",
-  "ExtendIntervalAlgorithm": [
-    "X16R",
-    "X16S"
-  ],
-  "ExtendIntervalMinerName": [
-    "PalginNvidia"
-  ],
   "UseFastestMinerPerAlgoOnly": "$true",
-  "IgnoreMinerFee":  "$IgnoreMinerFee"
+  "IgnoreCosts":  "$IgnoreCosts",
+  "ShowPoolBalances": "$true",
+  "ShowPoolBalancesExcludedPools": "$ShowPoolBalancesExcludedPools"
 }
