@@ -53,7 +53,7 @@ $MiningPoolHubCoins_Request.return | Where-Object {$_.pool_hash -gt 0} | ForEach
         if ($User) {
             [PSCustomObject]@{
                 Algorithm     = $MiningPoolHubCoins_Algorithm_Norm
-                Info          = $MiningPoolHubCoins_Coin
+                CoinName      = $MiningPoolHubCoins_Coin
                 Price         = $Stat.Live
                 StablePrice   = $Stat.Week
                 MarginOfError = $Stat.Week_Fluctuation
@@ -70,7 +70,7 @@ $MiningPoolHubCoins_Request.return | Where-Object {$_.pool_hash -gt 0} | ForEach
             if ($MiningPoolHubCoins_Algorithm_Norm -eq "Ethash" -and $MiningPoolHubCoins_Coin -NotLike "*ethereum*") {
                 [PSCustomObject]@{
                     Algorithm     = "$($MiningPoolHubCoins_Algorithm_Norm)2gb"
-                    Info          = $MiningPoolHubCoins_Coin
+                    CoinName      = $MiningPoolHubCoins_Coin
                     Price         = $Stat.Live
                     StablePrice   = $Stat.Week
                     MarginOfError = $Stat.Week_Fluctuation
@@ -88,7 +88,7 @@ $MiningPoolHubCoins_Request.return | Where-Object {$_.pool_hash -gt 0} | ForEach
             if ($MiningPoolHubCoins_Algorithm_Norm -eq "CryptonightV7" -or $MiningPoolHubCoins_Algorithm_Norm -eq "Equihash") {
                 [PSCustomObject]@{
                     Algorithm     = $MiningPoolHubCoins_Algorithm_Norm
-                    Info          = $MiningPoolHubCoins_Coin
+                    CoinName      = $MiningPoolHubCoins_Coin
                     Price         = $Stat.Live
                     StablePrice   = $Stat.Week
                     MarginOfError = $Stat.Week_Fluctuation
