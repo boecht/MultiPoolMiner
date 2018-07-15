@@ -55,6 +55,7 @@
     "XmrigNvidia"
   ],
   "ExcludePoolName": [
+    "AHashPool",
     "BlockMasters",
     "MiningPoolHubCoins",
     "YiiMP",
@@ -77,5 +78,5 @@
   "UseFastestMinerPerAlgoOnly": "$true",
   "IgnoreCosts":  "$IgnoreCosts",
   "ShowPoolBalances": "$true",
-  "ShowPoolBalancesExcludedPools": "$ShowPoolBalancesExcludedPools"
+  "ShowPoolBalancesExcludedPools": "$true"
 }
