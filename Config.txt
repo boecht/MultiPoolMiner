@@ -38,7 +38,10 @@
   "MinerName": "$MinerName",
   "PoolName": "$PoolName",
   "ExcludeAlgorithm": [
-    "CryptoNightHeavy"
+    "CryptoNightHeavy",
+    "Groestl",
+    "Sib",
+    "Lbry"
   ],
   "ExcludeMinerName": [
     "Dstm",
