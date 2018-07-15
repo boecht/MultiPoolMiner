@@ -60,7 +60,8 @@
     "MiningPoolHub",
     "MiningPoolHubCoins",
     "YiiMP",
-    "ZergPool"
+    "ZergPool",
+    "Zpool"
   ],
   "Currency": [
     "BTC",
