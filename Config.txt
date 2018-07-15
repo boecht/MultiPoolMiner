@@ -57,6 +57,7 @@
   "ExcludePoolName": [
     "AHashPool",
     "BlockMasters",
+    "MiningPoolHub",
     "MiningPoolHubCoins",
     "YiiMP",
     "ZergPool"
