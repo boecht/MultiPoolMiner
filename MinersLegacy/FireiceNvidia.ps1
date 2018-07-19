@@ -12,11 +12,11 @@ $Commands = [PSCustomObject]@{
     "cryptonight_haven"       = "" # CryptoNightHaven
     "cryptonight_heavy"       = "" # CryptoNightHeavy
     "cryptonight_lite"        = "" # CryptoNightLite
-    #"cryptonight_lite_v7"    = "" # CryptoNightLiteV7   --- BROKEN   <<< FireiceNvidia < XmrigNvidia < CcminerAllium
+    "cryptonight_lite_v7"     = "" # CryptoNightLiteV7
     "cryptonight_lite_v7_xor" = "" # CryptoNightLiteV7Xor
     "cryptonight_masari"      = "" # CryptoNightMasari
     "cryptonight_v7_stellite" = "" # CryptoNightV7Stellite
-    "cryptonight_v7"          = "" # CryptoNightV7
+    #"cryptonight_v7"         = "" # CryptoNightV7   --- BROKEN   <<< FireiceNvidia < XmrigNvidia < CcminerAllium
 }
 
 $Commands | Get-Member -MemberType NoteProperty | Select-Object -ExpandProperty Name | ForEach-Object {
