@@ -55,15 +55,10 @@
     "XmrigNvidia"
   ],
   "ExcludePoolName": [
-    "AHashPool",
-    "BlazePool",
     "BlockMasters",
-    "MiningPoolHub",
+    "Hashrefinery",
     "MiningPoolHubCoins",
-    "NiceHash",
-    "YiiMP",
-    "ZergPool",
-    "Zpool"
+    "YiiMP"
   ],
   "Currency": [
     "BTC",
